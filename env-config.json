@@ -1,0 +1,15 @@
+{
+  "env": {
+    "commons": {
+      "REACT_APP_COUNTRY": "it",
+      "REACT_APP_LANG": "it_IT",
+      "REACT_APP_LANG_FR": "it-IT" 
+    },
+    "dev": {
+      "REACT_APP_BROWSER_ROUTER_BASE": "/"
+    },
+    "prod": {
+      "REACT_APP_BROWSER_ROUTER_BASE": "/"
+    }
+  }
+}

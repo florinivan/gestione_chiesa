@@ -1,0 +1,13 @@
+public/
+node_modules/
+config/
+scripts/
+package-lock.json
+package.json
+.lintstagedrc
+.huskyrc
+.prettierignore
+.eslintignore
+.npmrc
+.env*
+*.png

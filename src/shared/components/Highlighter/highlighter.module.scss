@@ -1,0 +1,7 @@
+@import "shared/styles/base/_breakpoint.scss";
+@import "shared/styles/base/_variables.scss";
+
+.searchValueHighlighter {
+  background-color: $light-green;
+  width: fit-content;
+}

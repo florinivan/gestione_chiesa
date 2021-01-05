@@ -1,0 +1,38 @@
+@import "shared/styles/base/_breakpoint";
+
+@mixin default-col {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+@mixin generate-responsive-col($width) {
+  flex-basis: $width / $columns * 100%;
+  max-width: $width / $columns * 100%;
+}
+
+@mixin col($prefix) {
+  @for $width from 0 through $columns {
+    @if $width == 0 {
+      @if $prefix == "" {
+        .fr-col {
+          @include default-col;
+        }
+      } @else {
+        .fr-col-#{$prefix} {
+          @include default-col;
+        }
+      }
+    } @else {
+      @if $prefix == "" {
+        .fr-col-#{$width} {
+          @include generate-responsive-col($width);
+        }
+      } @else {
+        .fr-col-#{$prefix}-#{$width} {
+          @include generate-responsive-col($width);
+        }
+      }
+    }
+  }
+}

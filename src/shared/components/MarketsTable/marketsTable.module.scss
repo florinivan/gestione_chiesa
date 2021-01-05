@@ -1,0 +1,146 @@
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+@import "shared/styles/base/_variables.scss";
+
+$horizontal-cell-padding: 8.05px;
+$min-data-cell-height: 24px;
+$fontSize: 12px;
+
+.wrapper {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.table {
+  overflow: hidden;
+  font-size: $fontSize;
+
+  .tableHeadCell {
+    vertical-align: top;
+    height: 24px;
+    padding: 5px $horizontal-cell-padding;
+    &:nth-child(n + 2) {
+      border-left: 1px solid currentColor;
+    }
+
+    text-transform: lowercase;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  .dataCell {
+    padding: 5px $horizontal-cell-padding;
+    color: $invision-light-black;
+    letter-spacing: 0.24px;
+    line-height: 14px;
+    min-height: $min-data-cell-height;
+    overflow: hidden;
+    word-break: break-word;
+  }
+
+  .tableBodyRow {
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 1px solid $grey;
+  }
+
+  strong {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.24px;
+    line-height: 14px;
+  }
+}
+
+.tableHeadingWrapper {
+  height: 22px;
+  width: 100%;
+  font-size: $fontSize;
+  overflow: hidden;
+  padding: 4px $horizontal-cell-padding;
+  display: block;
+  background: $light-green;
+  color: $invision-light-black;
+  letter-spacing: 0.24px;
+  line-height: 14px;
+  /* Overrides default styles */
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.tableHeadRow {
+  width: 100%;
+  background-color: $medium-green;
+  height: 14px;
+  padding: 5px $horizontal-cell-padding;
+  height: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 0.24px;
+  line-height: 14px;
+  overflow: hidden;
+}
+
+.clippedBorder,
+.darkerClippedBorder {
+  position: relative;
+
+  &:nth-child(n + 2)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: $invision-light-grey-4;
+  }
+}
+
+.darkerClippedBorder {
+  &:nth-child(n + 2)::after {
+    background: $light-grey;
+  }
+}
+
+.fullBorder {
+  position: relative;
+
+  &:nth-child(n + 2)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: $invision-light-grey-4;
+  }
+}
+
+.subCell {
+  padding: 4px 0;
+  line-height: 14px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:nth-last-of-type(n + 2) {
+    border-bottom: 1px solid $invision-light-grey-4;
+  }
+}
+
+.horizontalRuler {
+  overflow: hidden;
+  height: 1px;
+  width: 100%;
+  display: block;
+  background: $grey;
+}

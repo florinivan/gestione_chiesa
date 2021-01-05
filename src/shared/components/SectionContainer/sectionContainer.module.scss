@@ -1,0 +1,16 @@
+@import "shared/styles/base/_breakpoint.scss";
+
+.containerTitleSection {
+  display: flex;
+  flex-grow: 1;
+  & > h5[class*="title"] {
+    font-weight: 900;
+    font-size: 16px;
+    font-family: Muli;
+  }
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+  margin: 0.75rem 0;
+}

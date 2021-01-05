@@ -1,0 +1,36 @@
+@import "shared/styles/base/_variables.scss";
+@import "shared/styles/base/_breakpoint.scss";
+
+.scrollTop {
+  position: fixed;
+  z-index: 1000;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  right: 16px;
+  bottom: 56px;
+  border-radius: 50px;
+  padding-top: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-green;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+
+  @media (max-width: $desktopLarge) {
+    right: 16px;
+  }
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

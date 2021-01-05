@@ -1,0 +1,20 @@
+@import "shared/styles/base/_variables.scss";
+
+.widgetButton {
+  height: 32px;
+  width: 100px;
+  min-width: 0;
+  cursor: pointer;
+  padding: 0 2px !important;
+  &.mobile {
+    height: 30px;
+    width: 6rem;
+    &.mobileDown {
+      width: 5rem;
+    }
+  }
+}
+
+.buttonLabel {
+  letter-spacing: 0.5px;
+}

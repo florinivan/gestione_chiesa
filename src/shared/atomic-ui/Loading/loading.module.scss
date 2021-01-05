@@ -1,0 +1,76 @@
+$bg-dark-loading: #ffffffdb;
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  background: $bg-dark-loading;
+  z-index: 10;
+}
+.items {
+  text-align: center;
+  p {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+}
+.icon {
+  @-webkit-keyframes jump {
+    to {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    from {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  }
+  @keyframes jump {
+    to {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    from {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  }
+
+  @-webkit-keyframes rotation {
+    to {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    from {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotation {
+    to {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    from {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  /* forjump */
+  -webkit-animation: jump infinite 0.5s ease-in-out alternate;
+  animation: jump infinite 0.5s ease-in-out alternate;
+
+  /*
+  // forrotation
+  // animation: rotation infinite 2s linear;
+  */
+}

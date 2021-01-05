@@ -1,0 +1,23 @@
+@import "shared/styles/base/_variables.scss";
+
+.bg-blue {
+  background-color: $blue;
+}
+.bg-medium-grey {
+  background-color: $invision-medium-grey;
+}
+.bg-dark-blue {
+  background-color: $dark-blue;
+}
+.bg-primary-light-green {
+  background-color: $light-green;
+}
+.bg-dark-blue-high {
+  background: $invision-dark-blue;
+}
+.bg-promo-alert-green {
+  background: $promo-alert-green;
+}
+.bg-live-green-blue {
+  background: $green-blue-live-gradient;
+}

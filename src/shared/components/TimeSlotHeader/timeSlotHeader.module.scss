@@ -1,0 +1,32 @@
+@import "shared/styles/base/_breakpoint.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 10px;
+
+  @media (max-width: $desktopLarge) {
+    border-bottom: 1px solid white;
+  }
+}
+
+.mobile {
+  background-color: #262c2f;
+  border-bottom: 1px solid #fff;
+}
+
+.time {
+  color: white;
+  font-weight: 500;
+  font-size: 12px;
+  margin-left: 5px;
+  flex-grow: 1;
+}
+
+.pointer {
+  cursor: pointer;
+  .clockIcon {
+    filter: invert(1);
+  }
+}

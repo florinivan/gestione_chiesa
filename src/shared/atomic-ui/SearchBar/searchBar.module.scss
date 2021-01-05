@@ -1,0 +1,52 @@
+@import "shared/styles/base/_variables.scss";
+@import "shared/styles/base/_breakpoint.scss";
+
+.fluid[class*="search-input"] {
+  width: 100%;
+  max-width: 360px;
+  @media (min-width: $desktopLarge) {
+    display: block;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.tip {
+  font-size: 14px;
+  text-align: center;
+
+  font-style: italic;
+  color: $grey;
+}
+
+input[class*="search-input"]::placeholder {
+  color: $grey;
+}
+
+input[class*="search-input"]:focus::placeholder {
+  color: transparent;
+}
+
+.errorBottom {
+  min-height: 33px;
+  padding-top: 8px;
+}
+
+.errorTop {
+  min-height: 24px;
+  padding-bottom: 8px;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 13.5px;
+  top: 3px;
+}
+
+.container {
+  position: relative;
+  @media (min-width: $mobile) and (max-width: $desktopXXlarge) {
+    display: flex;
+    min-width: 340px;
+  }
+}

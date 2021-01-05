@@ -1,0 +1,35 @@
+@import "shared/styles/base/_variables.scss";
+@import "shared/atomic-ui/LoadingOverlay/_mixins";
+
+.loadingOverlay {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.4);
+  /* 
+   * Do not update this z-index here:
+   * pass a css class to the component 
+   * with the desired value.
+   */
+  z-index: $loadingOverlayDefaultZIndex;
+  color: $medium-green;
+}
+
+.visibleOverlay {
+  display: flex;
+  user-select: none;
+  opacity: 1;
+
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/pointer-events */
+  pointer-events: auto;
+
+  & * {
+    pointer-events: none;
+  }
+}

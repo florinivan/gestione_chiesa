@@ -1,0 +1,109 @@
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
+// 1920 -> m-w: 1920 -> pd 31px xxxxl
+// 1600 -> m-w: 1600 -> pd 31px xxxl
+// 1440 -> m-w: 1440 -> pd 31px xxl
+// 1366 -> m-w: 1366 -> pd 31px xl
+// 1280 -> m-w: 1280 -> pd 31px lg
+// 768  -> m-w: 768  -> pd 16px md
+// 360  -> m-w: 360  -> pd 16px sm
+
+$columns: 12;
+
+/*
+ * - "mobile":  from 0            to ($tablet - 1px);
+ * - "tablet":  from $tablet      to ($desktopLarge - 1px);
+ * - "desktop": from $dektopLarge to +Infinity
+ */
+
+$zero: 0px;
+$mobile: 360px;
+$tablet: 768px;
+$desktopLarge: 1280px;
+$desktopXlarge: 1366px;
+$desktopXXlarge: 1440px;
+$desktopXXXlarge: 1600px;
+$desktopXXXXlarge: 1920px;
+
+$fr-breakpoints: (
+  "zero": $zero,
+  "mobile": $mobile,
+  "tablet": $tablet,
+  "desktopLarge": $desktopLarge,
+  "desktopXlarge": $desktopXlarge,
+  "desktopXXlarge": $desktopXXlarge,
+  "desktopXXXlarge": $desktopXXXlarge,
+  "desktopXXXXlarge": $desktopXXXXlarge
+);
+
+:export {
+  zero: $zero;
+  mobile: $mobile;
+  tablet: $tablet;
+  desktopLarge: $desktopLarge;
+  desktopXlarge: $desktopXlarge;
+  desktopXXlarge: $desktopXXlarge;
+  desktopXXXlarge: $desktopXXXlarge;
+  desktopXXXXlarge: $desktopXXXXlarge;
+}
+
+/**
+ * Asserts on compile time
+ * that input is one of `fr-breakpoints` names.
+ */
+@mixin assert-fr-breakpoint-name-is-valid($name) {
+  @if map-get($fr-breakpoints, $name) == null {
+    @error "breakpoint name provided is not valid, see '$fr-breakpoints'.";
+  }
+}
+
+/**
+ * Usage:
+ * .desktopLargeAndHigher {
+ *   @include media-fr-breakpoint-up("desktopLarge") {
+ *     display: inline-block;
+ *   }
+ * }
+ */
+@mixin media-fr-breakpoint-up($name) {
+  @include assert-fr-breakpoint-name-is-valid($name);
+
+  @include media-breakpoint-up($name, $fr-breakpoints) {
+    @content;
+  }
+}
+
+/**
+ * Usage:
+ * .tabletAndMobile {
+ *   @include media-fr-breakpoint-down("tablet") {
+ *     display: inline-block;
+ *   }
+ * }
+ */
+@mixin media-fr-breakpoint-down($name) {
+  @include assert-fr-breakpoint-name-is-valid($name);
+
+  @include media-breakpoint-down($name, $fr-breakpoints) {
+    @content;
+  }
+}
+
+/**
+ * Usage:
+ *
+ * .onlyTablet {
+ *  @include media-fr-breakpoint-only(tablet) {
+ *    color: pink;
+ *    background: cyan;
+ *  }
+ * }
+ *
+ */
+@mixin media-fr-breakpoint-only($name) {
+  @include assert-fr-breakpoint-name-is-valid($name);
+
+  @include media-breakpoint-only($name, $fr-breakpoints) {
+    @content;
+  }
+}

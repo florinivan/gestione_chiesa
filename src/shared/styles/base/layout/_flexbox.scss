@@ -1,0 +1,110 @@
+@import "shared/styles/base/_breakpoint";
+@import "./mixins/_col.scss";
+@import "./mixins/_offset.scss";
+
+@mixin desktop-padding {
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+@mixin mobile-padding {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.fr-container {
+  // box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  // width: 100%;
+  // padding-right: 0.5rem;
+  // padding-left: 0.5rem;
+}
+
+.fr-row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.fr-nogutters {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+[class^="fr-col"] {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+@include col("");
+@include offset("");
+
+@media only screen and (min-width: $mobile) {
+  .fr-container {
+    max-width: $mobile;
+    @include mobile-padding();
+  }
+  @include col("sm");
+  @include offset("sm");
+}
+
+@media only screen and (min-width: $tablet) {
+  .fr-container {
+    max-width: $tablet;
+    @include mobile-padding();
+  }
+  @include col("md");
+  @include offset("md");
+}
+
+@media only screen and (min-width: $desktopLarge) {
+  .fr-container {
+    max-width: $desktopLarge;
+    @include desktop-padding();
+  }
+  @include col("lg");
+  @include offset("lg");
+}
+
+@media only screen and (min-width: $desktopXlarge) {
+  .fr-container {
+    max-width: $desktopXlarge;
+    @include desktop-padding();
+  }
+  @include col("xl");
+  @include offset("xl");
+}
+
+@media only screen and (min-width: $desktopXXlarge) {
+  .fr-container {
+    max-width: $desktopXXlarge;
+    @include desktop-padding();
+  }
+  @include col("xxl");
+  @include offset("xxl");
+}
+
+@media only screen and (min-width: $desktopXXXlarge) {
+  .fr-container {
+    max-width: $desktopXXXlarge;
+    @include desktop-padding();
+  }
+  @include col("xxxl");
+  @include offset("xxxl");
+}
+
+@media only screen and (min-width: $desktopXXXXlarge) {
+  .fr-container {
+    max-width: $desktopXXXXlarge;
+    @include desktop-padding();
+  }
+  @include col("xxxxl");
+  @include offset("xxxxl");
+}

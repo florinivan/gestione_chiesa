@@ -1,0 +1,22 @@
+@import "shared/styles/base/_variables.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: $black-blue;
+  margin-right: 16px;
+
+  i {
+    height: 24px;
+  }
+}
+// .white {
+//   background-color: $white;
+// }
+// .black {
+//   background-color: $black;
+// }

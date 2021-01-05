@@ -1,0 +1,12 @@
+@import "shared/styles/base/_variables.scss";
+
+.backgroundCircleCSS {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 14px;
+  width: 14px;
+  border: 1px solid $light-grey;
+  background: $invision-white-gradient;
+  border-radius: 10px;
+}

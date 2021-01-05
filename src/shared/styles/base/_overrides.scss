@@ -1,0 +1,33 @@
+@import "shared/styles/base/_variables.scss";
+
+// Breadcrumb
+.sisalBreadcrumb {
+  color: $white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 14px;
+}
+
+// Nav link
+.sisalNavLink {
+  &:hover {
+    background-color: transparent !important;
+    // color: $medium-green;
+    //border-bottom: 2px solid $medium-green;
+  }
+}
+
+// Nav Tabs
+.sisalNavTabsNav {
+  padding-left: 14px;
+
+  @media (min-width: $desktopLarge) {
+    padding-left: 0px;
+  }
+}
+
+// List group
+.sisalListGroup {
+  list-style: none;
+  padding: inherit;
+}

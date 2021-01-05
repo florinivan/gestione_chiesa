@@ -1,0 +1,17 @@
+.container {
+  height: 20px;
+  min-width: 16px;
+  padding-top: 1px;
+  margin-bottom: 0.5px;
+  letter-spacing: 0.24px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.scorebold {
+  font-weight: bold;
+}

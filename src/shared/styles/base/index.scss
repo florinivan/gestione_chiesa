@@ -1,0 +1,60 @@
+@import "shared/styles/base/_variables";
+@import "shared/styles/base/_background";
+@import "shared/styles/base/_breakpoint";
+@import "shared/styles/base/_overrides";
+@import "shared/styles/base/layout/_flexbox.scss";
+
+#root-betting {
+  a,
+  a:not([href]):not([tabindex]) {
+    text-decoration: none;
+  }
+
+  div[class^="breakpoint__"] {
+    width: 100%;
+  }
+
+  overflow-x: hidden;
+}
+
+// /* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+i {
+  cursor: pointer;
+}
+
+.sticky-menu {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  background-color: $white;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 24px;
+}
+
+.hidden-fr-mobile {
+  @include media-fr-breakpoint-down("mobile") {
+    display: none !important;
+  }
+}
+
+.hidden-fr-tablet-down {
+  @include media-fr-breakpoint-down("tablet") {
+    display: none !important;
+  }
+}
+
+.hidden-fr-desktopLarge-up {
+  @include media-fr-breakpoint-up("desktopLarge") {
+    display: none !important;
+  }
+}

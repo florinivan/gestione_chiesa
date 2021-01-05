@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="7px" viewBox="0 0 31 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>88805B9E-61AD-403D-9393-2374B048EDB0</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="974" height="26"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="03_Streaming-mouse---mouse-hover" transform="translate(-190.000000, -487.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1366" height="2299"></rect>
+            <g id="content" transform="translate(0.000000, -620.000000)">
+                <g id="Group-2" transform="translate(31.000000, 687.000000)">
+                    <g id="Element-/-Bar-/-Categoria-di-esito" transform="translate(0.000000, 420.000000)">
+                        <g id="Colors-/-Secondary-/-Grey">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Mask"></g>
+                            <g mask="url(#mask-2)" fill="#2F3C43" id="Rectangle">
+                                <rect x="0" y="0" width="974" height="26"></rect>
+                            </g>
+                        </g>
+                        <text id="1x2-Esito-finale" font-family="Roboto-Bold, Roboto" font-size="12" font-weight="bold" line-spacing="18" letter-spacing="0.240000004" fill="#FFFFFF">
+                            <tspan x="32" y="15">Goal / No goal</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <rect id="Rectangle-Copy-6" stroke="#F70303" stroke-width="2" x="-7" y="1" width="1372" height="766"></rect>
+            <g id="Group-37" transform="translate(0.000000, 477.000000)">
+                <path d="M10,0 L400,0 C405.522847,-1.01453063e-15 410,4.4771525 410,10 L410,26 L410,26 L0,26 L0,10 C-6.76353751e-16,4.4771525 4.4771525,1.01453063e-15 10,0 Z" id="Rectangle-Copy-26" fill="#2F3C43"></path>
+                <g id="Icon-/-Draggable" transform="translate(190.000000, 10.000000)" fill="#D8D8D8" stroke="#979797" stroke-width="1.32">
+                    <g id="line" transform="translate(0.000000, 0.700000)">
+                        <rect id="Rectangle" x="0.66" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy" x="4.70347826" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-2" x="8.74695652" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-3" x="12.7904348" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-4" x="16.833913" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-5" x="20.8773913" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-6" x="24.9208696" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-7" x="28.9643478" y="0.66" width="1" height="1"></rect>
+                    </g>
+                    <g id="line-copy" transform="translate(0.000000, 4.200000)">
+                        <rect id="Rectangle" x="0.66" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy" x="4.70347826" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-2" x="8.74695652" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-3" x="12.7904348" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-4" x="16.833913" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-5" x="20.8773913" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-6" x="24.9208696" y="0.66" width="1" height="1"></rect>
+                        <rect id="Rectangle-Copy-7" x="28.9643478" y="0.66" width="1" height="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

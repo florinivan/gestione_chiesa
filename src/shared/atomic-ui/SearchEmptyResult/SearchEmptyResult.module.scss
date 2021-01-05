@@ -1,0 +1,17 @@
+.noResultInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.noResultText {
+  max-width: 262px;
+}
+
+.iconNoResult {
+  width: 70px;
+  height: 63px;
+  background-size: 65px;
+  cursor: inherit;
+}

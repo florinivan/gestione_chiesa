@@ -1,0 +1,23 @@
+@import "shared/styles/base/_breakpoint";
+
+@mixin generate-responsive-offeset($width) {
+  @if $width == 0 {
+    margin-left: 0;
+  } @else {
+    margin-left: $width / $columns * 100%;
+  }
+}
+
+@mixin offset($prefix) {
+  @for $width from 0 through 11 {
+    @if $prefix == "" {
+      .fr-col-offset-#{$width} {
+        @include generate-responsive-offeset($width);
+      }
+    } @else {
+      .fr-col-#{$prefix}-offset-#{$width} {
+        @include generate-responsive-offeset($width);
+      }
+    }
+  }
+}

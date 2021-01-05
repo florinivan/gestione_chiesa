@@ -1,0 +1,24 @@
+.container {
+  border: 2px solid deeppink;
+  border-radius: 1px;
+  padding: 16px;
+  font-size: 14px;
+}
+
+.title {
+  font-size: 10px;
+  letter-spacing: 0.1ex;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: deeppink;
+  padding: 0px;
+  margin: 0px;
+}
+
+.content {
+  padding-top: 8px;
+}
+
+.badge {
+  opacity: 0.6;
+}

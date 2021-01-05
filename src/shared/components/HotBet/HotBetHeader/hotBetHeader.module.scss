@@ -1,0 +1,103 @@
+@import "shared/styles/base/_variables.scss";
+
+.hotBetHeaderWrapper[class*="card-header"] {
+  padding: 0;
+  border-bottom: none;
+
+  &.darkBackground {
+    background-color: $invision-dark-grey;
+  }
+}
+
+.container {
+  display: flex;
+  height: 37px;
+
+  &.borderDown {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  &.backgroundImg {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .game {
+    flex-grow: 1;
+    margin: auto 0;
+    padding-left: 8px;
+    width: 100%;
+
+    &.widthForTimeOnRight {
+      width: calc(100% - 45px);
+    }
+
+    &.widthForLivescore {
+      width: 60%;
+    }
+
+    .timeOnTop {
+      display: flex;
+    }
+
+    .iconContainer {
+      padding-right: 5px;
+
+      i {
+        background-size: contain;
+      }
+    }
+
+    &.fontWhite {
+      color: white;
+    }
+
+    &.fontBlack {
+      color: black;
+    }
+
+    .player {
+      display: flex;
+      align-items: center;
+
+      .teamIcon {
+        height: 7px;
+        width: 8px;
+      }
+    }
+  }
+
+  .time {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+
+    &.timeOnRight {
+      height: 37px;
+      width: 45px;
+      justify-content: center;
+      white-space: normal;
+      text-align: center;
+      background-color: black;
+      color: white;
+      border-top-right-radius: 10px;
+    }
+  }
+
+  .livescore {
+    display: flex;
+    height: 100%;
+    padding-right: 0;
+  }
+
+  .ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .paddingBottom {
+    padding-bottom: 2px;
+  }
+}

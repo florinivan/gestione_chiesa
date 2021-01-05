@@ -1,0 +1,52 @@
+.subHeaderContainer {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+
+  .liveIcon {
+    display: flex;
+    align-content: center;
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    margin-right: 4px;
+  }
+  &__competition {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3px;
+    height: 20px;
+
+    &__description {
+      width: 100%;
+    }
+
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  .sportIcon {
+    display: flex;
+    align-items: center;
+    div[class*="text_icon-left-container"] {
+      margin-right: 0px;
+    }
+  }
+  // &__liveIcons {
+  //   i {
+  //     background-position-x: center;
+  //     background-position-y: center;
+  //   }
+  // }
+
+  &__macroDescription {
+    padding-bottom: 8px;
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

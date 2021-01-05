@@ -1,0 +1,63 @@
+@import "shared/styles/base/_variables.scss";
+
+.horizontalScroll {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: $white;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    height: 0;
+    width: 0;
+  }
+  // There is a CSS rule that can hide scrollbars in IE 10+.
+  -ms-overflow-style: none;
+
+  // Use -ms-autohiding-scrollbar if you wish to display on hover.
+  // -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  // There used to be a CSS rule that could hide scrollbars in Firefox, but it has since been deprecated.
+  scrollbar-width: none;
+}
+
+.container {
+  display: -webkit-box;
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 100%;
+  -webkit-box-align: center;
+  align-items: center;
+  scrollbar-width: none;
+  position: relative;
+  scroll-behavior: smooth;
+
+  // &__item {
+  //   &:first-child {
+  //     margin-left: 14px;
+  //   }
+  //   margin-right: 14px;
+  // }
+}
+
+.items {
+  flex-wrap: nowrap;
+  display: flex;
+  // & > div {
+  //   &:first-child {
+  //     margin-left: 14px;
+  //   }
+  //   margin-right: 14px;
+  // }
+}
+
+.iconPositionTop {
+  display: flex;
+  position: absolute;
+  top: -22px;
+  right: 0px;
+}

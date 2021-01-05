@@ -1,0 +1,100 @@
+@import "shared/styles/base/_breakpoint.scss";
+@import "shared/styles/base/_variables.scss";
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  color: $white;
+  width: 100%;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.24px;
+  padding: 0px;
+
+  .showcaseFull {
+    height: 50px;
+  }
+
+  .accordion {
+    height: 30px;
+    cursor: pointer;
+  }
+
+  .label {
+    text-decoration: underline;
+  }
+
+  .competitionLabel {
+    padding: 6px 0px;
+  }
+
+  .columns {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .labelSearchHeader {
+    padding: 5px 0px;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  .dropdownSearchHeader {
+    padding: 0px 8px;
+    margin: auto;
+    display: flex;
+  }
+
+  .flagCssDesktop {
+    border: 1px solid $invision-light-black;
+    margin-left: 3px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .sportIconCssDesktop {
+    width: 18px;
+    height: 18px;
+    border: none;
+  }
+}
+
+.disable {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  padding-top: 2px;
+  padding-left: 5px;
+  @media (min-width: $desktopXlarge) {
+    padding-left: 12px;
+  }
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 2px;
+}
+
+.arrowIcon {
+  cursor: pointer;
+  margin-right: 15px !important;
+}
+
+.arrowIconMobile {
+  cursor: pointer;
+  margin-right: 15px !important;
+}
+
+.closeIcon {
+  cursor: pointer;
+}
+
+.mobileArrow {
+  margin-right: 4px !important;
+  padding-top: 0;
+}

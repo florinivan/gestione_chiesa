@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-top-container {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
+}
+
+.icon-left-container {
+  margin-right: 5px;
+}
+.icon-top {
+  flex-direction: column;
+}
+
+.icon-left {
+  flex-direction: row;
+}
+.bold {
+  font-weight: bold;
+}

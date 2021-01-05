@@ -1,0 +1,7 @@
+$loadingOverlayDefaultZIndex: 5;
+
+@mixin stackedOverLoadingOverlay {
+  position: relative;
+  /* It has to be higher than loading overlay z-index. */
+  z-index: $loadingOverlayDefaultZIndex + 1;
+}

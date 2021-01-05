@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 40px;
+}
+
+.fluid {
+  // display: flex;
+  max-height: 40px;
+  align-items: center;
+  width: 100%;
+  min-width: 100%;
+}
+.alignleft {
+  text-align: left;
+}
+.alignRight {
+  text-align: right;
+}
+.alignCenter {
+  text-align: center;
+}
+.leftContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+
+  i {
+    margin-right: 10px;
+  }
+}
+
+.resetPadding {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.counter {
+  display: block;
+}
+
+.cursor {
+  cursor: default;
+}

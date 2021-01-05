@@ -1,0 +1,116 @@
+@import "shared/styles/base/_breakpoint.scss";
+@import "shared/styles/base/_variables.scss";
+
+.topwinnerModal {
+  @media (min-width: $tablet) {
+    max-width: 547px;
+    max-height: 516px;
+  }
+}
+
+.titleTWinnerModal {
+  background-color: $dark-blue;
+  display: flex;
+  width: 100%;
+  height: 53px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 24px;
+}
+.topWinnerSubHeader {
+  height: 42px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: $invision-light-grey-4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @media (min-width: $tablet) {
+    justify-content: space-between;
+  }
+
+  .containerRanking {
+    display: flex;
+    justify-content: center;
+    width: 58px;
+    @media (min-width: $tablet) {
+      width: 56px;
+    }
+    @media (min-width: $desktopLarge) {
+      width: 70px;
+    }
+  }
+  .containerName {
+    display: flex;
+    align-items: center;
+    .lowerCase {
+      display: inline-block;
+      text-transform: lowercase;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    .firstletter {
+      display: inline-block;
+      visibility: hidden;
+      text-transform: lowercase;
+      &::first-letter {
+        text-transform: uppercase;
+        visibility: visible;
+      }
+      &::after {
+        content: ".";
+      }
+    }
+  }
+  .label {
+    font-size: 10px;
+    color: $grey;
+    padding-right: 4px;
+    display: flex;
+    align-items: center;
+
+    @media (min-width: $tablet) {
+      font-size: 12px;
+    }
+  }
+  .labelPlay {
+    margin-left: 28px;
+    @media (min-width: $tablet) {
+      margin-left: 32px;
+    }
+  }
+  .amount {
+    font-size: 12px;
+    font-weight: bold;
+    @media (min-width: $tablet) {
+      font-size: 14px;
+    }
+  }
+  .containerAmount {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    flex: 2;
+    @media (min-width: $tablet) {
+      flex: 3;
+      // flex: 2;
+    }
+  }
+}
+
+.topwinnerFooter {
+  padding: 16px 0px;
+  display: flex;
+  justify-content: flex-end;
+  .column {
+    display: flex;
+    flex-direction: column;
+    &.value {
+      div {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

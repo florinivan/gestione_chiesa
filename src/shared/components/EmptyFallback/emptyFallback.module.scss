@@ -1,0 +1,64 @@
+@import "shared/styles/base/_breakpoint.scss";
+
+.container {
+  display: block;
+  overflow: hidden;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+
+  @include media-fr-breakpoint-down(tablet) {
+    flex-flow: column nowrap;
+  }
+}
+
+.text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column nowrap;
+  padding-left: 30px;
+  padding-right: 30px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.title {
+  margin-bottom: 15px;
+}
+
+.description {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.imageBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.image {
+  width: 70%;
+  margin-left: 30%;
+  max-width: 300px;
+}
+
+.info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cta {
+  display: inline-block;
+  align-self: center;
+
+  @include media-fr-breakpoint-up(desktopLarge) {
+    align-self: flex-start;
+  }
+}

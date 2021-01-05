@@ -1,0 +1,34 @@
+$greenBanker: #008036;
+
+.container {
+  display: flex;
+  border: 1px solid $greenBanker;
+  border-radius: 2px;
+  color: $greenBanker;
+  height: 16px;
+}
+
+.bankerF {
+  width: 16px;
+}
+
+.checkBox {
+  font-family: Roboto;
+  position: relative;
+  border-top: 1px solid $greenBanker;
+  border-bottom: 1px solid $greenBanker;
+  border-right: 1px solid $greenBanker;
+  border-left: 2px solid $greenBanker;
+  width: 16px;
+  cursor: pointer;
+
+  &.isActive {
+    border: none;
+
+    .iconContainer {
+      position: absolute;
+      top: -9px;
+      right: -10px;
+    }
+  }
+}

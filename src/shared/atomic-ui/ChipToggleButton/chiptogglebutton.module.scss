@@ -1,0 +1,47 @@
+@import "shared/styles/base/_variables.scss";
+@import "shared/styles/base/_breakpoint.scss";
+
+.container {
+  margin: 0px;
+  padding: 0px;
+  min-width: 53px;
+  align-items: center;
+  list-style-type: none;
+  height: 100%;
+  width: 53px;
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  border-radius: 0px !important;
+  p {
+    margin-top: -5px;
+  }
+  i {
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (min-width: $desktopLarge) {
+    border-radius: 6px !important;
+  }
+  &:hover {
+    // TODO: get variable from sisal theme
+    background-image: linear-gradient(45deg, #00d6bc 0%, #b9d732 100%);
+  }
+}
+
+.label {
+  width: 53px;
+  color: #222222;
+  margin: auto;
+
+  h5 {
+    text-align: center;
+    margin: 0px;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: bold;
+  }
+}

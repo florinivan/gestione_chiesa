@@ -1,0 +1,67 @@
+@import "shared/styles/base/_variables.scss";
+@import "shared/styles/base/_breakpoint.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+
+  i {
+    height: 24px;
+  }
+}
+.white {
+  background-color: $white;
+}
+.black {
+  background-color: $black-blue;
+}
+.containerSocialButtons {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-between;
+  right: 1rem;
+  &.noLockPosition {
+    bottom: 5rem;
+  }
+  &.lockPosition {
+    bottom: 1.8rem;
+  }
+  &.mobilePosition {
+    bottom: 2.5rem;
+  }
+  button:focus {
+    outline: none;
+  }
+  @media (min-width: $desktopLarge) {
+    width: 150px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.visibleClass {
+  visibility: visible;
+}
+.noVisibleClass {
+  visibility: hidden;
+}
+.shareIcon {
+  display: flex;
+  align-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: $white;
+  justify-content: center;
+  margin-left: 16px;
+  @media (min-width: $desktopLarge) {
+    margin: 8px 0px;
+  }
+}

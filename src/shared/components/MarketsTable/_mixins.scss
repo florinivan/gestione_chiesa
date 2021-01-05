@@ -1,0 +1,13 @@
+/* Sets max width to all cols with index `$colIndex` (1-based)  */
+@mixin fixed-col-width($colIndex, $colWidth: "", $maxWidth: "") {
+  td:nth-of-type(#{$colIndex}),
+  th:nth-of-type(#{$colIndex}) {
+    @if $colWidth != "" {
+      width: $colWidth;
+    }
+
+    @if $maxWidth != "" {
+      max-width: $maxWidth;
+    }
+  }
+}

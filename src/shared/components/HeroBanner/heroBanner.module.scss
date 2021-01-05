@@ -1,0 +1,264 @@
+@import "shared/styles/base/_variables.scss";
+@import "shared/styles/base/_breakpoint.scss";
+@import "shared/styles/base/_mixins.scss";
+
+/* Z-indexes */
+$backgroundImageZIndex: 0;
+$textContentZIndex: 1;
+$topIconWrapperZIndex: 2;
+$leftImageZIndex: 1;
+
+/* Dimesions */
+$mobileSlideHeight: 108px;
+$desktopSlideHeight: 147px;
+
+/* @see https://jira.sisal.it:8443/browse/DS-17391 */
+.heroBannerWrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  overflow: hidden;
+  & > * {
+    flex: 1 1 auto;
+  }
+}
+
+.heroBannerItemWrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+
+  height: $mobileSlideHeight;
+
+  @include media-fr-breakpoint-up(tablet) {
+    height: $desktopSlideHeight;
+  }
+
+  &.light {
+    color: $white;
+
+    .topIcon {
+      /* Used to change the icon color.  */
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  &.dark {
+    color: $invision-light-black;
+
+    .topIcon {
+      filter: brightness(0) invert(0.1);
+    }
+  }
+
+  &.grey {
+    color: $medium-grey;
+
+    .topIcon {
+      filter: brightness(0) invert(0.3);
+    }
+  }
+
+  .sideImage {
+    object-fit: cover;
+    flex: 0 0 auto;
+    position: relative;
+    z-index: $leftImageZIndex;
+    overflow: hidden;
+    max-width: 84px;
+    height: $mobileSlideHeight;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include media-fr-breakpoint-up(tablet) {
+      max-width: 147px;
+      height: $desktopSlideHeight;
+    }
+  }
+
+  .textContent {
+    position: relative;
+    z-index: $textContentZIndex;
+    flex: 1 1 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 32px 1fr 0 32px;
+    grid-template-areas:
+      "topRow"
+      "title"
+      "subTitle"
+      "bottomRow";
+    overflow: hidden;
+    height: 100%;
+    align-items: flex-start;
+
+    @include media-fr-breakpoint-up(tablet) {
+      padding: 0 13px;
+      grid-template-rows: 40px 24px 1fr 33px;
+    }
+  }
+
+  height: $mobileSlideHeight;
+
+  @include media-fr-breakpoint-up(tablet) {
+    height: $desktopSlideHeight;
+  }
+}
+
+.chip {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  color: $invision-light-black;
+  border: none;
+  border-radius: 17.5px;
+  overflow: hidden;
+  font-size: 12px;
+  height: 24px;
+  font-weight: bold;
+  /* @see DSM -> label */
+  padding: 0 8px;
+  min-width: 60px;
+
+  &.info {
+    background: $invision-informative-light-blue;
+  }
+
+  &.bonus {
+    background: $success-green;
+  }
+
+  &.numericContent {
+    background: $invision-light-yellow-2;
+  }
+}
+
+.header {
+  grid-area: title;
+
+  padding: 6px 0 0;
+
+  @include media-fr-breakpoint-up(tablet) {
+    padding: 0;
+  }
+
+  &:empty {
+    visibility: hidden;
+  }
+
+  .title {
+    font-family: Muli;
+    letter-spacing: 0.42px;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.428;
+    max-width: 100%;
+
+    @include line-clamp(2);
+
+    @include media-fr-breakpoint-up(tablet) {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 0.48px;
+      line-height: 1.1666;
+      @include line-clamp(1);
+    }
+  }
+}
+
+.subTitle {
+  grid-area: subTitle;
+  font-family: Roboto;
+  display: none;
+
+  &:empty {
+    visibility: hidden;
+  }
+
+  @include media-fr-breakpoint-up(tablet) {
+    margin: 6px 0 0;
+    padding: 1px 0;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    line-height: 1.25;
+    @include line-clamp(2);
+  }
+}
+
+.cta {
+  display: inline-block;
+  overflow: hidden;
+  margin: 0;
+
+  &.ctaButton {
+    height: 24px;
+    padding: 5px 8px;
+  }
+
+  &.ctaLink {
+    text-decoration: underline !important;
+    color: $light-green;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.28px;
+    line-height: 1.142;
+    padding: 4px 0;
+  }
+}
+
+.topIconWrapper {
+  display: none;
+  position: absolute;
+  z-index: $topIconWrapperZIndex;
+  top: 7.52px;
+  right: 8.18px;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  white-space: nowrap;
+
+  @include media-fr-breakpoint-up(tablet) {
+    display: block;
+  }
+}
+
+.topRow {
+  grid-area: topRow;
+  display: flex;
+  overflow: hidden;
+  padding: 8px 0 0;
+
+  @include media-fr-breakpoint-up(tablet) {
+    padding: 11px 0 0;
+  }
+}
+
+.bottomRow {
+  grid-area: bottomRow;
+  display: flex;
+  overflow: hidden;
+  padding: 4px 2px 0;
+}
+
+.backgroundImage {
+  position: absolute;
+  z-index: $backgroundImageZIndex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

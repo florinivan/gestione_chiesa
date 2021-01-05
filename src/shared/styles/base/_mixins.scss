@@ -1,0 +1,21 @@
+/* 
+ * Forces text at max `$max_lines` and adds ellipsis in case of overflow.
+ * @see https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-line-clamp 
+ */
+@mixin line-clamp($max_lines: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $max_lines;
+  overflow: hidden;
+}
+
+/* 
+ * Forces text on one line and adds ellipsis in case of overflow.
+ * @see https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow 
+ * @see https://stackoverflow.com/questions/7993067/text-overflow-ellipsis-not-working/7993098
+ */
+@mixin text-overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

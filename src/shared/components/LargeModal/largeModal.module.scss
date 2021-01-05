@@ -1,0 +1,20 @@
+@import "shared/styles/base/_breakpoint.scss";
+
+.bottomModal {
+  @media (max-width: $tablet) {
+    position: fixed;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 767.98px;
+  }
+}
+
+// Have the modal on top when the ticket is
+// displayed on mobile tablet over all the other elements
+.onTop {
+  z-index: 10001;
+}

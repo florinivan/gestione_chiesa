@@ -1,0 +1,7 @@
+@import "shared/styles/base/_breakpoint.scss";
+
+.container {
+  @include media-fr-breakpoint-down(tablet) {
+    margin-top: 30px;
+  }
+}

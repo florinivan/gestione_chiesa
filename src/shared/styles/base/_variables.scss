@@ -1,0 +1,439 @@
+/* 
+COLORS
+------------------ */
+
+// White
+$white: #fff;
+$white-states-color: lighten($white, 6%);
+
+// Black
+$black: #000;
+$invision-light-black: #222222;
+$betradar-light_black_1: #2d2f2b;
+$betradar-black: #000000;
+$betradar-black-1: #212121;
+
+// Grey
+$grey: #999999;
+$light-grey: #e0e0e0;
+$medium-grey: #979797;
+
+$invision-grey-1: #464646;
+$invision-light-grey-1: #d5d5d5;
+$invision-light-grey-2: #d8d8d8;
+$invision-light-grey-3: #cdcdcd;
+$invision-light-grey-4: #f2f2f2;
+$invision-light-grey-5: #fafafa;
+$invision-medium-grey: #5a5a5a;
+$invision-dark-grey: #333333;
+$betradar-grey: #5f615e;
+$betradar-grey-1: #424440;
+$betradar-grey-2: #484a47;
+$betradar-grey-3: #818280;
+
+$betradar-light-grey: #eaeaea;
+$betradar-light-grey-1: #b6b6b5;
+$betradar-light-grey-2: #cbcbca;
+$betradar-light-grey-3: #c0c1bf;
+$betradar-dark-grey: #3a3b38;
+$betradar-dark-grey-1: #464844;
+
+$betradar-opaque-grey: #f6f6f6;
+$betradar-opaque-grey-1: #cbcbcb;
+$betradar-opaque-grey-2: #c5c5c5;
+$betradar-opaque-grey-3: #fcfcfc;
+$betradar-opaque-grey-4: #b4b4b4;
+$betradar-opaque-grey-5: #bababa;
+$betradar-opaque-grey-6: #f4f4f4;
+$betradar-opaque-grey-7: #c2c2c2;
+$betradar-opaque-grey-8: #d9d9d9;
+
+// Green
+$dark-green: #005f3b;
+$medium-green: #0b7d3e;
+$light-green: #bed62f;
+$light-green-disabled: #627c30;
+$light-green-disabled-light-mode: #def199;
+$success-green: #40cd8c;
+$promo-alert-green: #dff5eb;
+$light-green-for-gradient: #008f7e;
+$green-whatsapp: #25d366;
+$invision-light-green-1: #dbece2;
+$betradar-light-green: #b9d531;
+$betradar-light-green-primary: #94aa27;
+$betradar-light-green-primary-1: #cee26f;
+$betradar-light-green-primary-2: #81932f;
+$betradar-light-green-primary-3: #57612d;
+$betradar-light-green-primary-4: #9db430;
+$betradar-light-green-soccer: #4fbe30;
+$betradar-light-green-soccer-1: #51d151;
+$betradar-light-green-soccer-2: #1b911b;
+$betradar-dark-green: #009900;
+
+$betradar-light-green-1: #d6e788;
+$betradar-light-green-2: #a7c02c;
+$betradar-light-green-disabled: #6f7d2e;
+$betradar-dark-green: #3e432c;
+$betradar-dark-green-1: #454b2c;
+$betradar-dark-green-2: #34372b;
+$betradar-dark-green-3: #515a2d;
+
+$betradar-opaque-green: #ecefdb;
+$betradar-opaque-green-1: #e1e9b7;
+
+// Blue
+$blue: #0095d6;
+$dark-blue: #2f3c43;
+$black-blue: #262c2f;
+$light-blue: #00d6bc;
+$invision-light-blue: #0d4ea5;
+$invision-light-blue-1: #0488d2;
+$invision-light-blue-2: #41c4ff;
+$invision-informative-light-blue: #67aaf9;
+$invision-dark-blue: #262c2f;
+$invision-dark-blue-1: #053b7f;
+$invision-dark-blue-2: #16155e;
+$invision-dark-blue-3: #016399;
+$betradar-blue: #026ef2;
+$betradar-blue-1: #0f5bb6;
+$betradar-blue-2: #2579ad;
+$betradar-blue-3: #0a6cce;
+
+$betradar-blue-light: #5ba1f7;
+$betradar-blue-light-1: #0e8094;
+$betradar-blue-light-2: #4a9fe4;
+$betradar-blue-light-3: #4b90de;
+$betradar-blue-light-4: #00a4ff;
+
+$blue-twitter: #00acee;
+$blue-telegram: #0088cc;
+$blue-facebook: #3b5998;
+$blue-messenger: #0078ff;
+
+// Yellow
+$yellow: #ffb82a;
+$yellow-for-gradient: #ffaf1e;
+
+$invision-light-yellow: #f9e600;
+$invision-light-yellow-1: #faf0d4;
+$invision-light-yellow-2: #ffbf00;
+$betradar-light-yellow: #fdd835;
+
+// Purple
+$purple: #589ff4;
+
+// Orange
+$orange: #ff8e0d;
+$invision-orange-1: #ff8200;
+$betradar-orange: #ffb848;
+$betradar-orange-1: #f5a623;
+$betradar-orange-2: #f4a621;
+$betradar-orange-3: #f7ab11;
+
+$betradar-dark-orange: #ef6c00;
+
+$betradar-opaque-orange: #f3dbb3;
+// Red
+$red: #eb1e23;
+$invision-light-red-1: #fcdede;
+$betradar-red: #de1010;
+$betradar-red-light: #e43b3b;
+$betradar-red-light-1: #e93a34;
+$betradar-red-light-2: #d0021b;
+
+$betradar-red-dark: #a91918;
+$betradar-red-dark-1: #941d1d;
+$betradar-red-dark-2: #ac182e;
+
+// Pink
+$pink: #ff5bad;
+$betradar-pink: #ea6464;
+
+// Gradient
+$orange-light-orange-gradient: linear-gradient(45deg, $orange, $yellow-for-gradient);
+$orange-pink-gradient: linear-gradient(45deg, $orange, $pink);
+$blue-green-gradient: linear-gradient(45deg, $light-blue, $light-green);
+$blue-light-blue-gradient: linear-gradient(45deg, $light-green-for-gradient, $light-blue);
+$green-dark-green-gradient: linear-gradient(45deg, $dark-green, $medium-green);
+$yellow-white-gradient: linear-gradient(45deg, $invision-light-yellow-2, $invision-light-yellow);
+$invision-white-gradient: linear-gradient(
+  180deg,
+  $invision-light-grey-5 0%,
+  $invision-light-grey-4 100%
+);
+$green-blue-live-gradient: linear-gradient(45deg, $light-blue, $light-green);
+/* 
+BORDER
+------------------ */
+$border-radius: 10px;
+
+/**
+PADDING
+@example greater than 10px
+calc( $padding-10 * 2) = 20px
+------------------ */
+
+$padding-1: 1px;
+$padding-2: 2px;
+$padding-3: 3px;
+$padding-4: 4px;
+$padding-5: 5px;
+$padding-6: 6px;
+$padding-7: 7px;
+$padding-8: 8px;
+$padding-9: 9px;
+$padding-10: 10px;
+
+/**
+MARGIN
+@example greater than 10px
+calc( $padding-10 * 2) = 20px
+------------------ */
+$margin-1: 1px;
+$margin-2: 2px;
+$margin-3: 3px;
+$margin-4: 4px;
+$margin-5: 5px;
+$margin-6: 6px;
+$margin-7: 7px;
+$margin-8: 8px;
+$margin-9: 9px;
+$margin-10: 10px;
+
+/* 
+Z-INDEX
+*/
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 9000;
+$z-index-10: 1000;
+
+/*
+* Size
+*/
+$icon-size-1: 1;
+$icon-size-2: 2;
+$icon-size-6: 6;
+$icon-size-9: 9;
+$icon-size-10: 10;
+$icon-size-11: 11;
+$icon-size-12: 12;
+$icon-size-13: 13;
+$icon-size-14: 14;
+$icon-size-15: 15;
+$icon-size-16: 16;
+$icon-size-18: 18;
+$icon-size-20: 20;
+$icon-size-22: 22;
+$icon-size-24: 24;
+$icon-size-26: 26;
+$icon-size-28: 28;
+$icon-size-33: 33;
+$icon-size-36: 36;
+$icon-size-40: 40;
+$icon-size-64: 64;
+/*
+* TICKET
+*/
+$ticket_header_height: 40px;
+
+:export {
+  yellow-white-gradient: $yellow-white-gradient;
+
+  white: $white;
+  white-states-color: $white-states-color;
+
+  black: $black;
+  invision-light-black: $invision-light-black;
+  betradar-light_black_1: $betradar-light_black_1;
+  betradar-black: $betradar-black;
+  betradar-black-1: $betradar-black-1;
+  grey: $grey;
+  light-grey: $light-grey;
+  medium-grey: $medium-grey;
+  betradar-grey: $betradar-grey;
+  betradar-dark-grey: $betradar-dark-grey;
+  betradar-dark-grey-1: $betradar-dark-grey-1;
+  betradar-grey-1: $betradar-grey-1;
+  betradar-grey-2: $betradar-grey-2;
+  betradar-grey-3: $betradar-grey-3;
+  betradar-light-grey: $betradar-light-grey;
+  betradar-light-grey-1: $betradar-light-grey-1;
+  betradar-light-grey-2: $betradar-light-grey-2;
+  betradar-light-grey-3: $betradar-light-grey-3;
+  betradar-opaque-grey: $betradar-opaque-grey;
+  betradar-opaque-grey-1: $betradar-opaque-grey-1;
+  betradar-opaque-grey-2: $betradar-opaque-grey-2;
+  betradar-opaque-grey-3: $betradar-opaque-grey-3;
+  betradar-opaque-grey-4: $betradar-opaque-grey-4;
+  betradar-opaque-grey-5: $betradar-opaque-grey-5;
+  betradar-opaque-grey-6: $betradar-opaque-grey-6;
+  betradar-opaque-grey-7: $betradar-opaque-grey-7;
+  betradar-opaque-grey-8: $betradar-opaque-grey-8;
+
+  betradar-light-green-soccer: $betradar-light-green-soccer;
+  betradar-light-green-soccer-1: $betradar-light-green-soccer-1;
+  betradar-light-green-soccer-2: $betradar-light-green-soccer-2;
+  betradar-dark-green: $betradar-dark-green;
+  invision-grey-1: $invision-grey-1;
+  invision-light-grey-1: $invision-light-grey-1;
+  invision-light-grey-2: $invision-light-grey-2;
+  invision-light-grey-3: $invision-light-grey-3;
+  invision-light-grey-4: $invision-light-grey-4;
+  invision-light-grey-5: $invision-light-grey-5;
+  invision-medium-grey: $invision-medium-grey;
+  invision-dark-grey: $invision-dark-grey;
+
+  dark-green: $dark-green;
+  medium-green: $medium-green;
+  light-green: $light-green;
+  light-green-disabled: $light-green-disabled;
+  light-green-disabled-light-mode: $light-green-disabled-light-mode;
+  promo-alert-green: $promo-alert-green;
+
+  success-green: $success-green;
+  light-green-for-gradient: $light-green-for-gradient;
+  green-whatsapp: $green-whatsapp;
+  betradar-light-green: $betradar-light-green;
+  betradar-light-green-primary: $betradar-light-green-primary;
+  betradar-light-green-primary-1: $betradar-light-green-primary-1;
+  betradar-light-green-primary-2: $betradar-light-green-primary-2;
+  betradar-light-green-primary-3: $betradar-light-green-primary-3;
+  betradar-light-green-primary-4: $betradar-light-green-primary-4;
+
+  betradar-light-green-1: $betradar-light-green-1;
+  betradar-light-green-2: $betradar-light-green-2;
+  betradar-dark-green: $betradar-dark-green;
+  betradar-dark-green-1: $betradar-dark-green-1;
+  betradar-dark-green-2: $betradar-dark-green-2;
+  betradar-dark-green-3: $betradar-dark-green-3;
+  betradar-light-green-disabled: $betradar-light-green-disabled;
+  betradar-opaque-green: $betradar-opaque-green;
+  betradar-opaque-green-1: $betradar-opaque-green-1;
+
+  blue: $blue;
+  dark-blue: $dark-blue;
+  black-blue: $black-blue;
+  light-blue: $light-blue;
+  betradar-blue: $betradar-blue;
+  betradar-blue-1: $betradar-blue-1;
+  betradar-blue-2: $betradar-blue-2;
+  betradar-blue-3: $betradar-blue-3;
+
+  betradar-blue-light: $betradar-blue-light;
+  betradar-blue-light-1: $betradar-blue-light-1;
+  betradar-blue-light-2: $betradar-blue-light-2;
+  betradar-blue-light-3: $betradar-blue-light-3;
+  betradar-blue-light-4: $betradar-blue-light-4;
+
+  invision-dark-blue: $invision-dark-blue;
+  invision-dark-blue-1: $invision-dark-blue-1;
+  invision-dark-blue-2: $invision-dark-blue-2;
+  invision-light-blue: $invision-light-blue;
+  invision-dark-blue-3: $invision-dark-blue-3;
+  invision-light-blue-1: $invision-light-blue-1;
+  blue-twitter: $blue-twitter;
+  blue-telegram: $blue-telegram;
+  blue-facebook: $blue-facebook;
+  blue-messenger: $blue-messenger;
+
+  yellow: $yellow;
+  invision-light-yellow-2: $invision-light-yellow-2;
+  yellow-for-gradient: $yellow-for-gradient;
+  betradar-light-yellow: $betradar-light-yellow;
+  purple: $purple;
+
+  orange: $orange;
+  betradar-orange: $betradar-orange;
+  betradar-orange-1: $betradar-orange-1;
+  betradar-orange-2: $betradar-orange-2;
+  betradar-orange-3: $betradar-orange-3;
+
+  betradar-dark-orange: $betradar-dark-orange;
+  betradar-opaque-orange: $betradar-opaque-orange;
+  red: $red;
+  betradar-red: $betradar-red;
+  betradar-red-light: $betradar-red-light;
+  betradar-red-light-1: $betradar-red-light-1;
+  betradar-red-light-2: $betradar-red-light-2;
+
+  betradar-red-dark: $betradar-red-dark;
+  betradar-red-dark-1: $betradar-red-dark-1;
+  betradar-red-dark-2: $betradar-red-dark-2;
+
+  pink: $pink;
+  betradar-pink: $betradar-pink;
+  orange-light-orange-gradient: $orange-light-orange-gradient;
+  orange-pink-gradient: $orange-pink-gradient;
+  blue-green-gradient: $blue-green-gradient;
+  blue-light-blue-gradient: $blue-light-blue-gradient;
+  green-dark-green-gradient: $green-dark-green-gradient;
+  invision-white-gradient: $invision-white-gradient;
+  green-blue-live-gradient: $green-blue-live-gradient;
+  // ????
+  border-radius: $border-radius;
+  // ????
+
+  padding-1: $padding-1;
+  padding-2: $padding-2;
+  padding-3: $padding-3;
+  padding-4: $padding-4;
+  padding-5: $padding-5;
+  padding-6: $padding-6;
+  padding-7: $padding-7;
+  padding-8: $padding-8;
+  padding-9: $padding-9;
+  padding-10: $padding-10;
+
+  margin-1: $margin-1;
+  margin-2: $margin-2;
+  margin-3: $margin-3;
+  margin-4: $margin-4;
+  margin-5: $margin-5;
+  margin-6: $margin-6;
+  margin-7: $margin-7;
+  margin-8: $margin-8;
+  margin-9: $margin-9;
+  margin-10: $margin-10;
+
+  z-index-1: $z-index-1;
+  z-index-2: $z-index-2;
+  z-index-3: $z-index-3;
+  z-index-4: $z-index-4;
+  z-index-5: $z-index-5;
+  z-index-6: $z-index-6;
+  z-index-7: $z-index-7;
+  z-index-8: $z-index-8;
+  z-index-9: $z-index-9;
+  z-index-10: $z-index-10;
+
+  icon-size-1: $icon-size-1;
+  icon-size-2: $icon-size-2;
+  icon-size-9: $icon-size-9;
+  icon-size-10: $icon-size-10;
+  icon-size-11: $icon-size-11;
+  icon-size-6: $icon-size-6;
+  icon-size-12: $icon-size-12;
+  icon-size-13: $icon-size-13;
+  icon-size-14: $icon-size-14;
+  icon-size-15: $icon-size-15;
+  icon-size-16: $icon-size-16;
+  icon-size-18: $icon-size-18;
+  icon-size-20: $icon-size-20;
+  icon-size-22: $icon-size-22;
+  icon-size-24: $icon-size-24;
+  icon-size-26: $icon-size-26;
+  icon-size-28: $icon-size-28;
+  icon-size-33: $icon-size-33;
+  icon-size-36: $icon-size-36;
+  icon-size-40: $icon-size-40;
+  icon-size-64: $icon-size-64;
+
+  ticket_header_height: $ticket_header_height;
+}

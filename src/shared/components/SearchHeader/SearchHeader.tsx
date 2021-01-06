@@ -1,7 +1,6 @@
 import React, { MouseEvent } from 'react';
 import classNames from 'classnames';
 import { useCurrentBreakpointName } from 'react-socks';
-import { ShowcaseType, Sport } from 'commons/models/Sport';
 import { BackgroundColorsVariant } from 'commons/types';
 import { Flag } from 'shared/atomic-ui/Flag/Flag';
 import { NewIcon } from 'shared/atomic-ui/Icon/Icon';
@@ -11,8 +10,6 @@ import styles from 'shared/components/SearchHeader/searchHeader.module.scss';
 export interface SearchHeaderProps {
   competitionId: number;
   backgroundColor: BackgroundColorsVariant;
-  sport: Sport;
-  showcase: ShowcaseType;
   iconUrl?: string;
   description?: string;
   isToggle: boolean;
@@ -62,9 +59,6 @@ export const SearchHeader: React.FC<SearchHeaderProps> = function SearchHeader(p
     <>
       <div className={classesRowDesktop} onClick={toggleResult}>
         <div className={styles.labelSearchHeader}>
-          {props.showSportIcon && (
-            <Flag src={props.sport.iconUrl} className={styles.sportIconCssDesktop} />
-          )}
           <Flag src={props.iconUrl} className={styles.flagCssDesktop}></Flag>
           <Text as="p" size="text-12" className={descriptionClasses}>
             {props.description}

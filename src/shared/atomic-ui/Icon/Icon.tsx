@@ -4,7 +4,7 @@ import { library, IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core
 
 import { ColorsType, IconSizeType } from 'commons/types';
 import { ICON_LIBRARY } from 'shared/atomic-ui/Icon/iconLibrary';
-import { getSisalUiColor } from 'shared/utils/getSisalUiColor';
+import { getUiColor } from 'shared/utils/getUiColor';
 
 import variables from 'shared/styles/base/_variables.scss';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -52,19 +52,19 @@ const FaIcon: React.FC<FontAwesomeIconsProps> = ({
 
   return (
     <FontAwesomeIcon
-      color={getSisalUiColor(faColor)}
+      color={getUiColor(faColor)}
       size={faSize || 'lg'}
       icon={[prefix, fa]}
       {...props}
       style={{
-        // backgroundColor: faBackgroundColor && getSisalUiColor(faBackgroundColor),
+        // backgroundColor: faBackgroundColor && getUiColor(faBackgroundColor),
         fontSize: faCustomSize && `${getIconSize(faCustomSize)}px`
       }}
     />
   );
 };
 
-export const Icon: React.FC<IconProps | FontAwesomeIconsProps> = props => {
+export const Icon: React.FC<IconProps | FontAwesomeIconsProps> = (props) => {
   const faProps = props as FontAwesomeIconsProps;
   const { className, name, ...sisalIconProps } = props as IconProps;
 
@@ -91,7 +91,7 @@ type NewIconProps = {
   size?: IconSizeType;
 } & JSX.IntrinsicElements['i'];
 
-export const NewIcon: React.FC<NewIconProps> = props => {
+export const NewIcon: React.FC<NewIconProps> = (props) => {
   const { className, name, color, size, ...sisalIconProps } = props;
 
   const getIconSize = (size?: IconSizeType) => {
@@ -102,7 +102,7 @@ export const NewIcon: React.FC<NewIconProps> = props => {
     <i
       className={`icon-${name} ${className ? className : ''}`}
       style={{
-        color: getSisalUiColor(color),
+        color: getUiColor(color),
         fontSize: getIconSize(size)
       }}
       {...sisalIconProps}></i>

@@ -69,7 +69,7 @@ export function getLocalizedNumberSeparator(locale: string, separatorType: 'grou
   const numberWithGroupAndDecimalSeparator = 1000.1;
   return Intl.NumberFormat(locale)
     .formatToParts(numberWithGroupAndDecimalSeparator)
-    .find(part => part.type === separatorType)?.value;
+    .find((part) => part.type === separatorType)?.value;
 }
 
 export function localizedNumberFormat(

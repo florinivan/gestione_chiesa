@@ -21,10 +21,9 @@ export const FormattedMoney: React.FC<FormattedMoneyProps> = ({
   minimumFractionDigits = Config.DEFAULT_NUMBER_FORMAT_DECIMALS,
   maximumFractionDigits = Config.DEFAULT_NUMBER_FORMAT_DECIMALS
 }) => {
-  const normalizedValue = skipCentsNormalization ? value : value / 100;
   const formattedNumber = (
     <FormattedNumber
-      value={normalizedValue}
+      value={value}
       style="currency"
       currency="EUR"
       currencyDisplay="symbol"

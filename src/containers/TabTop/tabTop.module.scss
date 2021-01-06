@@ -1,0 +1,33 @@
+@import "shared/styles/base/_breakpoint.scss";
+
+.tabTop {
+  width: 100%;
+}
+
+p.tabsTop {
+  font-family: Roboto, sans-serif;
+}
+
+.noOutline {
+  &:focus {
+    outline: none;
+  }
+}
+.tabTopPadding {
+  & [class*="nav-item"] {
+    margin-right: 14px;
+    @media (min-width: $desktopLarge) {
+      margin-right: 16px;
+    }
+  }
+
+  @media screen and (min-width: $zero) {
+    padding-left: 16px;
+  }
+  @media screen and (min-width: $desktopLarge) {
+    padding-left: 0px;
+  }
+}
+.noBackgroundColor {
+  background-color: transparent;
+}

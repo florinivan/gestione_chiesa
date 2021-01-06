@@ -1,4 +1,3 @@
-import { TicketSelectionPriceSetting } from 'containers/Ticket/Interfaces';
 import breakpoint from 'shared/styles/base/_breakpoint.scss';
 import { trimEnd } from 'lodash';
 
@@ -377,18 +376,6 @@ const PARAM_TYPESYSTEMCODE = 'codiceTipoSistema';
 const PARAM_TYPESYSTEMCODE_VALUE_MULTIPLE = 0;
 const PARAM_TYPESYSTEMCODE_VALUE_SYSTEM = 1;
 
-const TICKET_INFO_FEED_WINNING_BETS = '/ticket-info/getFeedScommesseVincenti?';
-/**
- * Default configurable options user can set and we pass to
- * the api during the purchase request.
- */
-const DEFAULT_TICKET_SALE_SETTINGS = {
-  hasUserAcceptedStakeVariation: true,
-  acceptSelectionPriceVariations: TicketSelectionPriceSetting.acceptAllSelectionsPrice,
-  loggedInAcceptSelectionPriceVariations: TicketSelectionPriceSetting.acceptAllSelectionsPrice,
-  isTicketSaleSettingsVisible: false
-} as const;
-
 const SEARCH_SETTINGS = {
   MIN_SEARCH_CHARACTERS: 3,
   DEFAULT_SEARCH_VALUE: ''
@@ -474,7 +461,6 @@ const Config = {
   SPORT_ID_BASKET,
   SPORT_ID_TENNIS,
   COOKIE_JWT_KEY,
-  DEFAULT_TICKET_SALE_SETTINGS,
   SEARCH_SETTINGS,
   HTTP_PREFIX,
   COOKIE_PLAYERID,
@@ -495,7 +481,6 @@ const Config = {
   PARAM_TYPESYSTEMCODE,
   PARAM_TYPESYSTEMCODE_VALUE_MULTIPLE,
   PARAM_TYPESYSTEMCODE_VALUE_SYSTEM,
-  TICKET_INFO_FEED_WINNING_BETS,
   BETGENIUS_SPORTS,
   BETGENIUS_LIVE_STATS_URL_PREFIX_LIST,
   BETGENIUS_LIVE_STATS_URL_MOBILE_PREFIX_LIST,

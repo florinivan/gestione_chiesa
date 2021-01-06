@@ -1,16 +1,17 @@
 {
-    "useTabs": false,
-    "printWidth": 100,
-    "tabWidth": 2,
-    "trailingComma": "none",
-    "jsxBracketSameLine": true,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.scss",
-        "options": {
-          "singleQuote": false
-        }
+  "useTabs": false,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "endOfLine": "auto",
+  "jsxBracketSameLine": true,
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": false
       }
-    ]
-  }
+    }
+  ]
+}

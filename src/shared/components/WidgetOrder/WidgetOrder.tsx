@@ -8,7 +8,7 @@ export interface WidgetOrderItemProps {
   render?: (label?: string) => React.ReactNode;
 }
 
-export const WidgetOrderItem: React.FC<WidgetOrderItemProps> = params => {
+export const WidgetOrderItem: React.FC<WidgetOrderItemProps> = (params) => {
   return <Fragment key={params.widgetKey}>{params.children}</Fragment>;
 };
 
@@ -27,7 +27,7 @@ export const WidgetOrder: React.FC<WidgetOrderProps> = ({ route, children }) => 
     }[]
   >(() => {
     const ch =
-      React.Children.map(children, c => c as React.ReactElement)?.map((c: React.ReactElement) => [
+      React.Children.map(children, (c) => c as React.ReactElement)?.map((c: React.ReactElement) => [
         c?.props?.widgetKey as string,
         c?.props?.children,
         c?.props?.render
@@ -36,7 +36,12 @@ export const WidgetOrder: React.FC<WidgetOrderProps> = ({ route, children }) => 
     const foundWidgets = [];
 
     for (const [key, child, render] of ch) {
-      const orderWidget = orderWidgets?.find((ow: { name: any }) => ow.name === key);
+      const orderWidget = orderWidgets?.find((ow) => {
+        if (ow === undefined) {
+          throw new Error('One of the params must be provided.');
+        }
+        return ow.name === key;
+      });
 
       if (orderWidget) {
         foundWidgets.push({
@@ -53,7 +58,15 @@ export const WidgetOrder: React.FC<WidgetOrderProps> = ({ route, children }) => 
       .map(({ child, order, render }) => ({ child, widgetOrderLabel: order.label, render }));
 
     const unknownOrderWidgets = (ch || [])
-      .filter(([key]) => !orderWidgets.find((ow: { name: any }) => ow.name === key))
+      .filter(
+        ([key]) =>
+          !orderWidgets.find((ow) => {
+            if (ow === undefined) {
+              throw new Error('One of the params must be provided.');
+            }
+            return ow.name === key;
+          })
+      )
       .map(([, child, render]) => ({ child, widgetOrderLabel: undefined, render }));
 
     return [...knownOrderWidgets, ...unknownOrderWidgets];

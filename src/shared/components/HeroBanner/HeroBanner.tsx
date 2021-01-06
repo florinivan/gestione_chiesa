@@ -31,7 +31,7 @@ export function HeroBanner({
           controls={controls}
           className={'hero-banner-carousel'}
           {...otherProps}>
-          {items.map((item: { title: any }, index: number) => {
+          {items.map((item, index: number) => {
             const ariaLabel = `${index + 1} of ${items.length}`;
 
             return (

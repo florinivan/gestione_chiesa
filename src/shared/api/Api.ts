@@ -1,4 +1,8 @@
+import { Observable } from 'rxjs/internal/Observable';
+import { map } from 'rxjs/operators';
 import { HttpClient } from 'commons/http/HttpClient';
+import { WidgetsOrderRaw, WidgetsOrder } from 'commons/models/WidgetsOrder';
+import Config from 'shared/configuration';
 
 export const httpClient = new HttpClient({
   baseUrl: process.env.REACT_APP_ENDPOINT
@@ -15,13 +19,18 @@ export class API {
     }
     return API.instance;
   }
-  /*
-  getShapePrematch(): Observable<ShapePrematch> {
-    return httpClient
-      .get<ShapePrematchRaw>(`${Config.API_BASE_PREMATCH}/alberaturaPrematch`)
-      .pipe(map(({ response }) => new ShapePrematch(response)));
-  }*/
-}
 
+  /**
+   *
+   */
+  getShapeWidgetsOrder(): Observable<WidgetsOrder> {
+    return httpClient.get<WidgetsOrderRaw>(`${Config.API_BASE}/routes`).pipe(
+      map(({ response }) => {
+        const shapeWidgetsOrder = new WidgetsOrder(response);
+        return shapeWidgetsOrder;
+      })
+    );
+  }
+}
 const rootAPI = API.getInstance();
 export { rootAPI };

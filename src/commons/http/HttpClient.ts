@@ -11,7 +11,7 @@ export class HttpClient {
   };
 
   constructor(options: HttpOptions) {
-    this.interceptors.request.push((request: { url: any }) => ({
+    this.interceptors.request.push((request) => ({
       ...request,
       url: `${options.baseUrl}${request.url}`
     }));

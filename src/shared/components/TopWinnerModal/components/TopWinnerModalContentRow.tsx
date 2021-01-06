@@ -5,7 +5,6 @@ import { useCurrentBreakpointName } from 'react-socks';
 import { FeedBettingDetail } from 'commons/models/TopWinner';
 import { Text } from 'shared/atomic-ui/Text/Text';
 import { NewIcon } from 'shared/atomic-ui/Icon/Icon';
-import { getPredictionSelectionPrice } from 'containers/Ticket/utils/PredictionUtility';
 
 import styles from 'shared/components/TopWinnerModal/components/topWinnerModalContent.module.scss';
 
@@ -75,9 +74,7 @@ export const TopWinnerModalContentRow: React.FC<TopWinnerModalContentRowProps> =
               </div>
             </div>
             <div className={styles.contentQuote}>
-              <Text as="p" size="text-12" color="text-black" className="d-flex">
-                {getPredictionSelectionPrice(bList.selectionPrice)}
-              </Text>
+              <Text as="p" size="text-12" color="text-black" className="d-flex"></Text>
             </div>
           </div>
         </div>

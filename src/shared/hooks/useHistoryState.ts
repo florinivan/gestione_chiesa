@@ -1,6 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { SportsbookTimeFilter } from 'commons/enums';
-import { CompetitionsTimeFilter } from 'commons/types';
 import * as H from 'history';
 import { TopTabId } from 'containers/TabTop/config';
 import * as React from 'react';
@@ -30,19 +27,6 @@ export interface AppHistoryLocationState {
    * The keys of all **special competitions** of all sports opened by the user.
    */
   readonly openSpecialCompetitionKeys?: string[];
-
-  /**
-   * The filter to apply in the Competitions menu and in the Competitions’
-   * details.
-   * key -> sport key
-   */
-  readonly competitionsTimeFilter?: CompetitionsTimeFilter;
-
-  /**
-   *
-   */
-
-  readonly sportsbookTimeFilter?: SportsbookTimeFilter;
 
   /**
    *

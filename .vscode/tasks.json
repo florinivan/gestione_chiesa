@@ -1,0 +1,97 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start:prod",
+      "problemMatcher": [],
+      "label": "Start (PROD)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=standalone REACT_APP_DEPLOY_ENV=prod node scripts/start.js"
+    },
+    {
+      "type": "npm",
+      "script": "start:preprod",
+      "problemMatcher": [],
+      "label": "Start (PREPROD)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=standalone REACT_APP_DEPLOY_ENV=preprod node scripts/start.js"
+    },
+    {
+      "type": "npm",
+      "script": "start:test",
+      "problemMatcher": [],
+      "label": "Start (TEST)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=standalone REACT_APP_DEPLOY_ENV=test node scripts/start.js"
+    },
+    {
+      "type": "npm",
+      "script": "start:dev",
+      "problemMatcher": [],
+      "label": "Start (DEV)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=standalone REACT_APP_DEPLOY_ENV=dev node scripts/start.js"
+    },
+    {
+      "type": "npm",
+      "script": "build:test:standalone",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Build Standalone (TEST)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=standalone REACT_APP_DEPLOY_ENV=test node scripts/build.js"
+    },
+    {
+      "type": "npm",
+      "script": "build:test:aem",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Build AEM (TEST)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=aem REACT_APP_DEPLOY_ENV=test node scripts/build.js"
+    },
+    {
+      "type": "npm",
+      "script": "build:prod:standalone",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Build Standalone (PROD)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=standalone REACT_APP_DEPLOY_ENV=prod node scripts/build.js"
+    },
+    {
+      "type": "npm",
+      "script": "build:preprod:standalone",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Build Standalone (PREPROD)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=standalone REACT_APP_DEPLOY_ENV=preprod node scripts/build.js"
+    },
+    {
+      "type": "npm",
+      "script": "build:prod:aem",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Build AEM (PROD)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=aem REACT_APP_DEPLOY_ENV=prod node scripts/build.js"
+    },
+    {
+      "type": "npm",
+      "script": "build:preprod:aem",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Build AEM (PREPROD)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=aem REACT_APP_DEPLOY_ENV=preprod node scripts/build.js"
+    },
+    {
+      "type": "npm",
+      "script": "build:dev:standalone",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Build Standalone (DEV)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=standalone REACT_APP_DEPLOY_ENV=dev node scripts/build.js"
+    },
+    {
+      "type": "npm",
+      "script": "build:dev:aem",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "Build AEM (DEV)",
+      "detail": "cross-env REACT_APP_DEPLOY_MODE=aem REACT_APP_DEPLOY_ENV=dev node scripts/build.js"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+@import "shared/styles/base/_variables.scss";
+
+.bodyRowContainer {
+  padding-bottom: 40px;
+}
+
+.ticketBottom {
+  z-index: 3;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+
+.breadcrumbPaddingTop {
+  ol[class*="breadcrumb"] {
+    padding-top: 16px;
+  }
+}
+.sidebarContainer {
+  p[class*="searchBar_tip"] {
+    padding-top: 0px;
+  }
+}

@@ -3,13 +3,19 @@
     "commons": {
       "REACT_APP_COUNTRY": "it",
       "REACT_APP_LANG": "it_IT",
-      "REACT_APP_LANG_FR": "it-IT" 
+      "REACT_APP_LANG_FR": "it-IT"
     },
     "dev": {
-      "REACT_APP_BROWSER_ROUTER_BASE": "/"
+      "REACT_APP_BROWSER_ROUTER_BASE": "/",
+      "REACT_APP_CMS_ENDPOINT_BASE": "",
+      "REACT_APP_ENDPOINT": "",
+      "REACT_APP_PRIVATE_AREA_BASE": ""
     },
     "prod": {
-      "REACT_APP_BROWSER_ROUTER_BASE": "/"
+      "REACT_APP_BROWSER_ROUTER_BASE": "/",
+      "REACT_APP_CMS_ENDPOINT_BASE": "",
+      "REACT_APP_ENDPOINT": "",
+      "REACT_APP_PRIVATE_AREA_BASE": ""
     }
   }
 }

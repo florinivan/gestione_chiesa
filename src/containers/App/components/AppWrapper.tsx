@@ -37,10 +37,7 @@ const AppWrapperComponent: React.FC<{}> = React.memo(
                 <Column lg="9" className={`${styles.breadcrumbPaddingTop}`}>
                   <div>
                     <Switch>
-                      <Route path={Config.BROWSER_ROUTER_PATH_MAP.FAVORITE_LIVE}></Route>
-                      <Route path={Config.BROWSER_ROUTER_PREFIX_LIVE}></Route>
-                      <Route path={Config.BROWSER_ROUTER_PATH_MAP.SPORT_RESERVATION} />
-                      <Route path={Config.BROWSER_ROUTER_PREFIX_PREMATCH}></Route>
+                      <Route path={Config.BROWSER_ROUTER_PREFIX}></Route>
                     </Switch>
                   </div>
                   <div className={styles.bodyRowContainer}>
@@ -65,19 +62,7 @@ const AppWrapperComponent: React.FC<{}> = React.memo(
           <div>
             <div>
               <Switch>
-                <Route path={Config.BROWSER_ROUTER_PATH_MAP.FAVORITE_LIVE}></Route>
-                <Route path={Config.BROWSER_ROUTER_PREFIX_LIVE}>
-                  <Switch>
-                    <Route
-                      path={[
-                        Config.BROWSER_ROUTER_PATH_MAP.SPORT_REGULATOR_LIVE_COUNTRY,
-                        Config.BROWSER_ROUTER_PATH_MAP.SPORT_REGULATOR_LIVE
-                      ]}
-                    />
-                    <Route path="*"></Route>
-                  </Switch>
-                </Route>
-                <Route path={Config.BROWSER_ROUTER_PREFIX_PREMATCH}>
+                <Route path={Config.BROWSER_ROUTER_PREFIX}>
                   <Switch>
                     <Route
                       path={[

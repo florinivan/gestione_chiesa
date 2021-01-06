@@ -17,7 +17,6 @@ export enum WidgetName {
   Strikers = 'strikers',
   HotBets = 'hot-bets',
   ChosenForYou = 'for-you',
-  SisalNews = 'sisal-news',
   OurApp = 'our-app',
   HeroBanner = 'hero-banner'
 }

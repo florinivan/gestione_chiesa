@@ -21,7 +21,7 @@ export const ScrollTop: React.FC<ScrollTopProps> = React.memo(({ isdesktop = tru
 
   React.useEffect(() => {
     const isVisible$ = browserInfoStore.scrollY$.pipe(
-      map(scrollY => scrollY > Config.SCROLL_TOP.VISIBILITY_THRESHOLD),
+      map((scrollY) => scrollY > Config.SCROLL_TOP.VISIBILITY_THRESHOLD),
       distinctUntilChanged(),
       skip(1)
     );

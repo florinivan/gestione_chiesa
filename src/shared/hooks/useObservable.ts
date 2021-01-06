@@ -18,7 +18,7 @@ export const useObservable: useObservableType = <T>(
   React.useEffect(() => {
     const subscription = observable$
       .pipe(distinctUntilChanged(isEqual))
-      .subscribe(value => setVal(value));
+      .subscribe((value) => setVal(value));
     return () => subscription.unsubscribe();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [...dependencies]);

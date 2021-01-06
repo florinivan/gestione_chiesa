@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/logo_cbr_maranata.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo_cbr_maranata.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <!-- <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0'"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Chiesa Maranata Alessandria" />
+  <link rel="apple-touch-icon" href="logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,20 +23,100 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Biserica Maranata Alessandria</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <script>
+    function randomString(length, chars) {
+      var result = '';
+      for (var i = length; i > 0; --i) result += chars[Math.floor(Math.random() * chars.length)];
+      return result;
+    }
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    var rString = randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+    var baseUrl = 'clientlib-base.min.{0}.css';
+    var head = document.getElementsByTagName('HEAD')[0];
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = ['%REACT_APP_CLIENTLIB_PATH%', baseUrl.replace('{0}', rString)].join('/');
+    head.appendChild(link);
+  </script>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <!-- to test dynamic header locally -->
+  <!-- <script>
+   setTimeout(() => {
+    var arr = ['height1','height2','height3'];
+    var idx = Math.floor(Math.random() * arr.length);
+    document.querySelectorAll('.js-navbar-menu.wrapper-header')[0].classList.add(arr[idx]);
+    console.log('baseHeighttimeout',headernode.style.height);
+  }, 5000)
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@700;900&display=swap" rel="stylesheet">
+  <!--<link href="%REACT_APP_ICONS%" rel="stylesheet">-->
+
+
+  <title>Chiesa Maranata Alessandria</title>
+  <style>
+    .fakeHeader {
+      background-color: white;
+      height: 50px;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      z-index: 9999;
+      -webkit-box-shadow: 0 4px 6px -6px #222;
+      -moz-box-shadow: 0 4px 6px -6px #222;
+      box-shadow: 0 4px 6px -6px #222;
+    }
+
+    .wrapper-alert-bread {
+      box-sizing: border-box;
+      width: 100%;
+      display: block;
+      height: 0;
+      background: pink;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <!-- to test locally dinamic header insert the same height of headernode into padding-top -->
+  <div style="padding-top:50px;" id="1302766139">
+    <div class="js-navbar-menu wrapper-header fakeHeader"> </div>
+  </div>
+  <!-- Use this element to simulate non fixed alerts. -->
+  <div class="wrapper-alert-bread"></div>
+  <div id="root-betting"></div>
+
+  <script type="text/javascript">
+    var utag_data = {
+      // inizializzazione o valorizzazione delle proprietà dell’oggetto utag_data
+    };
+  </script>
+  <script type="text/javascript">
+    (function (a, b, c, d) {
+      a = '//tags.tiqcdn.com/utag/sisal/main/qa/utag.js';
+      b = document; c = 'script'; d = b.createElement(c);
+      d.src = a; d.type = 'text/java' + c; d.async = true;
+      a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);
+    })();
+  </script>
+  <!-- SEO Text example -->
+  <div id="seo-text-example-standalone-2342" class="fr-container">
+    <div class="fr-row">
+      <div class="fr-col-12">
+        <div class="text-component-container bg-white">
+          <h1 class="h3 title">
+            Seo Text example
+          </h1>
+          <div class="container-description text-14 richtext-container">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>

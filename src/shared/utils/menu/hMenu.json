@@ -1,0 +1,31 @@
+{
+  "menus": [
+    {
+      "label": "Presenta",
+      "isAnchor": false,
+      "isInternal": false,
+      "icon": "faPlaceOfWorship",
+      "posizione": 1,
+      "data": "",
+      "key": "H01"
+    },
+    {
+      "label": "Membri",
+      "isAnchor": false,
+      "isInternal": false,
+      "icon": "",
+      "posizione": 0,
+      "data": "",
+      "key": "H02"
+    },
+    {
+      "label": "Ziua de Nastere",
+      "isAnchor": false,
+      "isInternal": false,
+      "icon": "",
+      "posizione": 2,
+      "data": "",
+      "key": "H03"
+    }
+  ]
+}

@@ -61,6 +61,7 @@ import { faPrint } from '@fortawesome/free-solid-svg-icons/faPrint';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons/faExternalLinkAlt';
 import { faTrashAlt as faTrashAltSolid } from '@fortawesome/free-solid-svg-icons/faTrashAlt';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons/faMapMarkerAlt';
+import { faPlaceOfWorship } from '@fortawesome/free-solid-svg-icons/faPlaceOfWorship';
 
 /* Regular
 ----------------*/
@@ -126,7 +127,7 @@ const SOLID = [
   faDownload,
   faPrint,
   faCaretUp,
-  faMinus
+  faPlaceOfWorship
 ];
 
 /**

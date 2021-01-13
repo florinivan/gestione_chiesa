@@ -11,7 +11,7 @@ export const NoSelections = React.memo(function NoSelections() {
   const { location } = useHistory<AppHistoryLocationState | undefined>();
 
   const linkTo = {
-    pathname: Config.BROWSER_ROUTER_PATH_MAP.SHOWCASE_PREMATCH,
+    pathname: Config.BROWSER_ROUTER_PATH_MAP.SHOWCASE_HOME,
     state: { ...location.state, selectedTopTabId: TopTabId.TopLive }
   };
 

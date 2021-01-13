@@ -5,7 +5,8 @@
       "REACT_APP_LANG": "it_IT",
       "REACT_APP_LANG_FR": "it-IT",
       "comment:0": "======Comment:Browser router paths======",
-      "REACT_APP_BROWSER_ROUTER_PREFIX": "/maranata"
+      "REACT_APP_BROWSER_ROUTER_PREFIX": "/maranata",
+      "REACT_APP_SHOWCASE_HMENU": "menu/:item"
     },
     "dev": {
       "REACT_APP_BROWSER_ROUTER_BASE": "/",

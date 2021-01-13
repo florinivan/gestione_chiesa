@@ -15,7 +15,7 @@ export class WidgetsOrder {
   public readonly routes: WidgetsOrderRaw['routes'];
 
   constructor(raw: WidgetsOrderRaw) {
-    this.routes = raw.routes;
+    this.routes = raw?.routes;
   }
 
   getRouteWidgetOrder(route: string) {

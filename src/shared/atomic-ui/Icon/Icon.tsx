@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon, FontAwesomeIconProps } from '@fortawesome/react-fontawesome';
 import { library, IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
 
-import { ColorsType, IconSizeType } from 'commons/types';
+import { ColorsType, IconSizeType, Nullable } from 'commons/types';
 import { ICON_LIBRARY } from 'shared/atomic-ui/Icon/iconLibrary';
 import { getUiColor } from 'shared/utils/getUiColor';
 
@@ -86,7 +86,7 @@ export const Icon: React.FC<IconProps | FontAwesomeIconsProps> = (props) => {
 };
 
 type NewIconProps = {
-  name?: string;
+  name?: Nullable<string>;
   color?: ColorsType;
   size?: IconSizeType;
 } & JSX.IntrinsicElements['i'];

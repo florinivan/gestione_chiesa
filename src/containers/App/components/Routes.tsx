@@ -6,10 +6,13 @@ import Config from 'shared/configuration';
 export const Routes: React.FC<{}> = React.memo(function Routes() {
   return (
     <Switch>
-      <Route path={Config.BROWSER_ROUTER_PATH_MAP.SHOWCASE_PREMATCH} exact>
+      <Route path={Config.BROWSER_ROUTER_PATH_MAP.SHOWCASE_HOME} exact>
         <Home />
       </Route>
-      <Redirect to={Config.BROWSER_ROUTER_PATH_MAP.SHOWCASE_PREMATCH} />
+      <Route path={Config.BROWSER_ROUTER_PATH_MENUBOOK}>
+        <Home />
+      </Route>
+      <Redirect to={Config.BROWSER_ROUTER_PATH_MAP.SHOWCASE_HOME} />
     </Switch>
   );
 });

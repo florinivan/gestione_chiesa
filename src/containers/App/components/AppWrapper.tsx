@@ -13,6 +13,8 @@ import { Column } from 'shared/atomic-ui/Layout/Column';
 
 import styles from 'containers/App/appwrapper.module.scss';
 import { ScrollTop } from 'shared/components/ScrollTop/ScrollTop';
+import { Breadcrumbs } from 'shared/components/Breadcrumbs/Breadcrumbs';
+import { Menubook } from 'containers/Menubook/Menubook';
 
 const AppWrapperComponent: React.FC<{}> = React.memo(
   function AppWrapper() {
@@ -35,9 +37,12 @@ const AppWrapperComponent: React.FC<{}> = React.memo(
             <Box type="row">
               {
                 <Column lg="9" className={`${styles.breadcrumbPaddingTop}`}>
+                  <Breadcrumbs />
                   <div>
                     <Switch>
-                      <Route path={Config.BROWSER_ROUTER_PREFIX}></Route>
+                      <Route path={Config.BROWSER_ROUTER_PREFIX}>
+                        <Menubook />
+                      </Route>
                     </Switch>
                   </div>
                   <div className={styles.bodyRowContainer}>
@@ -62,18 +67,9 @@ const AppWrapperComponent: React.FC<{}> = React.memo(
           <div>
             <div>
               <Switch>
-                <Route path={Config.BROWSER_ROUTER_PREFIX}>
-                  <Switch>
-                    <Route
-                      path={[
-                        Config.BROWSER_ROUTER_PATH_MAP.SPORT_REGULATOR_PREMATCH_COUNTRY,
-                        Config.BROWSER_ROUTER_PATH_MAP.SPORT_REGULATOR_PREMATCH
-                      ]}
-                      exact={true}
-                    />
-                    <Route path={Config.BROWSER_ROUTER_PATH_MAP.PLAYER_DETAILS} />
-                    <Route path="*"></Route>
-                  </Switch>
+                <Route path={Config.BROWSER_ROUTER_PREFIX}></Route>
+                <Route path="*">
+                  <Menubook />
                 </Route>
               </Switch>
             </div>

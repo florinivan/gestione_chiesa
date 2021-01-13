@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <meta charset="utf-8" />
@@ -36,7 +36,7 @@
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = ['%REACT_APP_CLIENTLIB_PATH%', baseUrl.replace('{0}', rString)].join('/');
+    link.href = ['%PUBLIC_URL%', baseUrl.replace('{0}', rString)].join('/');
     head.appendChild(link);
   </script>
 

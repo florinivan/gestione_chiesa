@@ -17,7 +17,7 @@ export class BrowserInfoStore {
   readonly scrollX$ = new BehaviorSubject<number>(0);
 
   /**
-   * Distance between top of `fr-sport` and the viewport top.
+   * Distance between top of and the viewport top.
    * It is generally covered by the `navbar` and other popups.
    */
   readonly rootBettingOffsetTop$ = new BehaviorSubject<number>(getRootBettingOffsetTop());

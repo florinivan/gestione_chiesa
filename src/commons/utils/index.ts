@@ -4,12 +4,12 @@ import config from 'shared/configuration';
 export const truncateWord = (word: string, truncateLength: number, ending = '...') =>
   word.length > truncateLength ? word.substring(0, truncateLength - ending.length) + ending : word;
 
-export const toSeoPath = (word: string) => {
-  const wordToReplace = word.toLowerCase().replace(/[^A-Z0-9]+/gi, '-');
+export const toSeoPath = (word: string | undefined) => {
+  const wordToReplace = word?.toLowerCase().replace(/[^A-Z0-9]+/gi, '-');
 
-  if (wordToReplace.startsWith('-')) {
+  if (wordToReplace?.startsWith('-')) {
     return wordToReplace.slice(1);
-  } else if (wordToReplace.endsWith('-')) {
+  } else if (wordToReplace?.endsWith('-')) {
     return wordToReplace.slice(0, -1);
   }
 

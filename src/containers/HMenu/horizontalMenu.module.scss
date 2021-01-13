@@ -1,0 +1,97 @@
+@import "shared/styles/base/_variables.scss";
+@import "shared/styles/base/_breakpoint.scss";
+
+.textTransform {
+  text-transform: capitalize;
+}
+
+.badgeLive {
+  color: $invision-light-black;
+  background: $blue-green-gradient;
+  display: flex;
+  font-size: 10px;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 8px;
+  justify-content: center;
+  min-width: 16px;
+  margin-left: 67%;
+  margin-top: 3px;
+  padding: 0 2px;
+  top: 0;
+  position: absolute;
+  height: 16px;
+}
+
+.containerCounter {
+  position: relative;
+  display: flex;
+}
+
+[class^="horizontal-scroll-menu"] {
+  [class*="nav-tabs"] {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.wrapper {
+  position: relative;
+
+  [class*="nav-link"],
+  [class*="nav-link"][class*="active"] {
+    padding: 0 0px 5px 0;
+  }
+
+  [class*="nav-tabs"] {
+    [class*="nav-item"] {
+      margin-bottom: 0px;
+    }
+
+    margin-bottom: 0px;
+    margin-right: 16px;
+
+    &:first-child {
+      padding-left: 14px;
+    }
+
+    &:last-child {
+      padding-right: 14px;
+    }
+  }
+
+  @media (min-width: $zero) {
+    width: calc(100% - 53px);
+  }
+
+  @media (min-width: $desktopLarge) {
+    width: 93%;
+    margin-bottom: 24px;
+  }
+  @media (min-width: $desktopXlarge) {
+    width: 93.6%;
+  }
+  @media (min-width: $desktopXXlarge) {
+    width: 94%;
+  }
+  @media (min-width: $desktopXXXlarge) {
+    width: 94.6%;
+  }
+  @media (min-width: $desktopXXXXlarge) {
+    width: 95.6%;
+  }
+}
+
+.wrapperRightButton {
+  position: absolute;
+  top: 0;
+  height: 100%;
+
+  @media (min-width: $zero) {
+    right: -53px;
+  }
+
+  @media (min-width: $desktopLarge) {
+    right: -61px;
+  }
+}

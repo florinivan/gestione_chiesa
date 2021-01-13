@@ -67,10 +67,10 @@ const AppWrapperComponent: React.FC<{}> = React.memo(
           <div>
             <div>
               <Switch>
-                <Route path={Config.BROWSER_ROUTER_PREFIX}></Route>
-                <Route path="*">
+                <Route path={Config.BROWSER_ROUTER_PREFIX}>
                   <Menubook />
                 </Route>
+                <Route path="*"></Route>
               </Switch>
             </div>
             <div className={styles.bodyRowContainer}>

@@ -7,6 +7,6 @@ import { Menu } from 'commons/models/Menu';
  */
 export function getMenuItemsbookPathname(menu: Menu) {
   return replaceAll(`${Config.BROWSER_ROUTER_PATH_MAP.MENUBOOK_ITEM}`, [
-    [':item', menu.label ? menu.label : '']
+    [':item', menu.getPathname() || '']
   ]);
 }

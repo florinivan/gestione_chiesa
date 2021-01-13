@@ -31,12 +31,12 @@
     }
 
     var rString = randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
-    var baseUrl = 'clientlib-base.min.{0}.css';
+    var baseUrl = 'clientlib-base.min.css';
     var head = document.getElementsByTagName('HEAD')[0];
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = ['%PUBLIC_URL%', baseUrl.replace('{0}', rString)].join('/');
+    link.href = ['%PUBLIC_URL%', baseUrl].join('/');
     head.appendChild(link);
   </script>
 

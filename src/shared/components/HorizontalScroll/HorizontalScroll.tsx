@@ -62,7 +62,7 @@ export const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
   }, [children, scroll]);
 
   const containerOffsetWidth = containerRef.current?.offsetWidth;
-  const childrenOffsetWidth = sum(childrenRefs.current?.map(ch => ch?.offsetWidth));
+  const childrenOffsetWidth = sum(childrenRefs.current?.map((ch) => ch?.offsetWidth));
   React.useEffect(() => {
     setContainerWidth(containerOffsetWidth);
     setChildrenWidth(childrenOffsetWidth);
@@ -179,11 +179,11 @@ export const HorizontalScroll: React.FC<HorizontalScrollProps> = ({
         className={styles.container}
         ref={containerRef}
         style={style}
-        onScroll={event => setScroll(event.currentTarget.scrollLeft)}>
+        onScroll={(event) => setScroll(event.currentTarget.scrollLeft)}>
         {React.Children.map(children, (element, i) => {
           return (
             <div
-              ref={ref => {
+              ref={(ref) => {
                 if (ref) {
                   childrenRefs.current[i] = ref;
                 }

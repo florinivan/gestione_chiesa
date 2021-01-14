@@ -2,7 +2,6 @@ import React from 'react';
 import { Modal } from 'react-bootstrap';
 import { useCurrentBreakpointName } from 'react-socks';
 
-import { TopWinner } from 'commons/models/TopWinner';
 import { ColorsType } from 'commons/types';
 import { NewIcon } from 'shared/atomic-ui/Icon/Icon';
 import { TopWinnerModalContent } from 'shared/components/TopWinnerModal/components/TopWinnerModalContent';
@@ -12,6 +11,7 @@ import { TopWinnerModalFooter } from 'shared/components/TopWinnerModal/component
 import styles from 'shared/components/TopWinnerModal/topWinnerModal.module.scss';
 import 'shared/components/FullscreenModal/fullscreenModal.scss';
 import 'shared/components/TopWinnerModal/topWinnerModal.scss';
+import { DataPresentChurch } from 'commons/models/PresentMember';
 
 export interface TopWinnerModalProps {
   show: boolean;
@@ -19,7 +19,7 @@ export interface TopWinnerModalProps {
   title: string;
   colorTitle?: string;
   colorIcon?: ColorsType;
-  topWinner: TopWinner;
+  datePresent: DataPresentChurch;
   ranking?: number;
 }
 
@@ -29,7 +29,7 @@ export const TopWinnerModal: React.FC<TopWinnerModalProps> = ({
   title,
   colorTitle,
   colorIcon,
-  topWinner,
+  datePresent,
   ranking
 }) => {
   const colorHeader = colorTitle ? colorTitle : 'text-black';
@@ -68,12 +68,12 @@ export const TopWinnerModal: React.FC<TopWinnerModalProps> = ({
         </div>
       </Modal.Header>
       <Modal.Body className="p-0">
-        {topWinner && (
+        {datePresent && (
           <>
-            <TopWinnerModalSubHeader topWinner={topWinner} ranking={ranking} />
+            <TopWinnerModalSubHeader datePresent={datePresent} ranking={ranking} />
             <div className={modalBody}>
-              <TopWinnerModalContent topWinner={topWinner} />
-              <TopWinnerModalFooter topWinner={topWinner} />
+              <TopWinnerModalContent datePresent={datePresent} />
+              <TopWinnerModalFooter datePresent={datePresent} />
             </div>
           </>
         )}

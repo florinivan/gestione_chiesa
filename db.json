@@ -5,5 +5,14 @@
       "name": "Topolino",
       "id": 2
     }
+  ],
+  "presenza_chiesa": [
+    {
+      "timestamp": "1524379940",
+      "nome_cognome": "Florin Ivan",
+      "data": "1/10/2021",
+      "numero_bambini_s_14": 2,
+      "telefono": 3498870966
+    }
   ]
 }

@@ -12,7 +12,7 @@ import styles from 'shared/components/TopWinnerModal/topWinnerModal.module.scss'
 
 export interface TopWinnerModalSubHeaderProps {
   datePresent: DataPresentChurch;
-  ranking?: number;
+  ranking?: string;
 }
 
 export const TopWinnerModalSubHeader: React.FC<TopWinnerModalSubHeaderProps> = ({
@@ -49,7 +49,7 @@ export const TopWinnerModalSubHeader: React.FC<TopWinnerModalSubHeaderProps> = (
               <FormattedMessage id="fr.containers.table.number.person" />
             </span>
             <span className={amountWonCss}>
-              <FormattedNumber value={+datePresent.presents.length} />
+              <FormattedNumber value={datePresent.getTotalPerson()} />
             </span>
           </div>
         </div>

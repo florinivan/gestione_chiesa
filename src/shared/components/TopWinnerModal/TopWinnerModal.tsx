@@ -8,10 +8,11 @@ import { TopWinnerModalContent } from 'shared/components/TopWinnerModal/componen
 import { TopWinnerModalSubHeader } from 'shared/components/TopWinnerModal/components/TopWinnerModalSubHeader';
 import { TopWinnerModalFooter } from 'shared/components/TopWinnerModal/components/TopWinnerModalFooter';
 
+import { DataPresentChurch } from 'commons/models/PresentMember';
+
 import styles from 'shared/components/TopWinnerModal/topWinnerModal.module.scss';
 import 'shared/components/FullscreenModal/fullscreenModal.scss';
 import 'shared/components/TopWinnerModal/topWinnerModal.scss';
-import { DataPresentChurch } from 'commons/models/PresentMember';
 
 export interface TopWinnerModalProps {
   show: boolean;
@@ -20,7 +21,7 @@ export interface TopWinnerModalProps {
   colorTitle?: string;
   colorIcon?: ColorsType;
   datePresent: DataPresentChurch;
-  ranking?: number;
+  ranking?: string;
 }
 
 export const TopWinnerModal: React.FC<TopWinnerModalProps> = ({

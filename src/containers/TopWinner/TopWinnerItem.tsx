@@ -12,7 +12,7 @@ import styles from 'containers/TopWinner/topWinner.module.scss';
 import { DataPresentChurch } from 'commons/models/PresentMember';
 
 interface TopWinnerItem {
-  ranking: number;
+  ranking: string;
   presentChurch: DataPresentChurch;
 }
 
@@ -22,7 +22,7 @@ export const TopWinnerItem: React.FC<TopWinnerItem> = ({
 }): ReactElement => {
   const { formatMessage } = useIntl();
   const [openModal, setOpenModal] = React.useState(false);
-  const [rankingModal, setRankingModal] = React.useState(0);
+  const [rankingModal, setRankingModal] = React.useState('');
   const [topWinnerToModal, setTopWinnerToModal] = React.useState<DataPresentChurch>();
   const handleHide = React.useCallback(() => setOpenModal(false), []);
   const openModalHandler = () => {
@@ -65,7 +65,7 @@ export const TopWinnerItem: React.FC<TopWinnerItem> = ({
                 <FormattedMessage id="fr.containers.table.number.person" />
               </span>
               {presentChurch.presents != null && (
-                <FormattedNumber value={+presentChurch.presents.length} />
+                <FormattedNumber value={presentChurch.getTotalPerson()} />
               )}
             </Text>
           </div>

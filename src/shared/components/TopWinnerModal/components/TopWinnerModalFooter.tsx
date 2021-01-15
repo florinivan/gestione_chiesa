@@ -20,24 +20,24 @@ export const TopWinnerModalFooter: React.FC<TopWinnerModalFooterProps> = ({ date
       <div className={columnLabel}>
         <div className="d-flex py-1">
           <Text color="text-black" size="text-12" as="p">
-            <FormattedMessage id="fr.containers.table.date" />
+            <FormattedMessage id="fr.containers.table.number.person.adults" />
           </Text>
         </div>
         <div className="d-flex py-1">
           <Text color="text-medium-green" size="text-12" as="p">
-            <FormattedMessage id="fr.containers.table.number.person" />
+            <FormattedMessage id="fr.containers.table.number.person.childrens" />
           </Text>
         </div>
       </div>
       <div className={columnValue}>
         <div className="d-flex py-1">
           <Text color="text-black" size="text-12" as="p" bold>
-            {datePresent.getdateDayFormat()}
+            {datePresent.presents.length}
           </Text>
         </div>
         <div className="d-flex py-1">
           <Text color="text-medium-green" size="text-12" as="p" bold>
-            <FormattedNumber value={+datePresent.presents.length} />
+            <FormattedNumber value={datePresent.getNumberChildren()} />
           </Text>
         </div>
       </div>

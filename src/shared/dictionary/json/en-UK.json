@@ -6,6 +6,11 @@
   "fr.components.CompetitionList.all": "All",
   "fr.components.CompetitionList.today": "Today",
   "fr.components.CompetitionList.2days": "2 Days",
+  "fr.containers.table.number_childrens_14": "Number of children under 14 years",
+  "fr.containers.table.name": "Name and Surname",
+  "fr.containers.table.phone": "Phone",
+  "fr.containers.table.date": "Data",
+  "fr.containers.table.number.person": "Numero presenti",
   "fr.components.CompetitionList.yourCompetitions": "Your favorite competitions",
   "fr.components.CompetitionList.topCompetitions": "Top competitions",
   "fr.components.CompetitionList.otherCompetitions": "Other competitions",
@@ -293,10 +298,9 @@
   "fr.containers.TopWinner.label.seeLess": "See less",
   "fr.containers.TopWinner.label.play": "Play",
   "fr.containers.TopWinner.label.win": "Win",
-  "fr.containers.TopWinner.label.discoverHow": "Discover how",
+  "fr.containers.TopWinner.label.discoverHow": "Discover",
   "fr.shared.components.TopWinnerModal.TopwinnerModalContent.event": "Event",
   "fr.shared.components.TopWinnerModal.TopwinnerModalContent.market": "Market Class",
   "fr.shared.components.TopWinnerModal.TopwinnerModalContent.sportbook": "Sportsbook:",
-  "fr.shared.components.TopWinnerModal.TopwinnerModalContent.avv": "AVV:",
-  "fr.shared.components.TopWinnerModal.sisalLabel": "on Sisal.it"
+  "fr.shared.components.TopWinnerModal.TopwinnerModalContent.avv": "AVV:"
 }

@@ -3,6 +3,7 @@ import { map } from 'rxjs/operators';
 import { HttpClient } from 'commons/http/HttpClient';
 import { WidgetsOrderRaw, WidgetsOrder } from 'commons/models/WidgetsOrder';
 import Config from 'shared/configuration';
+import { PresentMember, PresentMemberRaw } from 'commons/models/PresentMember';
 
 export const httpClient = new HttpClient({
   baseUrl: process.env.REACT_APP_ENDPOINT
@@ -18,6 +19,20 @@ export class API {
       API.instance = new API();
     }
     return API.instance;
+  }
+
+  /**
+   *API to retrive
+   */
+  getPresentMember(): Observable<PresentMember[]> {
+    return (
+      httpClient
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .get<any>(`${Config.API_BASE}/presenza_chiesa`)
+        .pipe(
+          map(({ response }) => response.map((raw: PresentMemberRaw) => new PresentMember(raw)))
+        )
+    );
   }
 
   /**

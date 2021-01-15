@@ -31,12 +31,12 @@
     }
 
     var rString = randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
-    var baseUrl = 'clientlib-base.min.{0}.css';
+    var baseUrl = 'clientlib-base.min.css';
     var head = document.getElementsByTagName('HEAD')[0];
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = ['%PUBLIC_URL%', baseUrl.replace('{0}', rString)].join('/');
+    link.href = ['%PUBLIC_URL%', baseUrl].join('/');
     head.appendChild(link);
   </script>
 
@@ -51,31 +51,33 @@
   </script> -->
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@700;900&display=swap" rel="stylesheet">
-  <!--<link href="%REACT_APP_ICONS%" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="%PUBLIC_URL%/fr-icons.css" rel="stylesheet">
 
 
   <title>Chiesa Maranata Alessandria</title>
+  <script src="%PUBLIC_URL%/utag.sync.js"></script>
   <style>
-    .fakeHeader {
-      background-color: white;
-      height: 50px;
-      position: fixed;
-      top: 0px;
-      width: 100%;
-      z-index: 9999;
-      -webkit-box-shadow: 0 4px 6px -6px #222;
-      -moz-box-shadow: 0 4px 6px -6px #222;
-      box-shadow: 0 4px 6px -6px #222;
+    .navbar-brand .icon-logo-portal {
+      height: 32px;
+      width: 32px;
+      background-size: 32px 32px;
     }
 
-    .wrapper-alert-bread {
-      box-sizing: border-box;
-      width: 100%;
-      display: block;
-      height: 0;
-      background: pink;
-      overflow: hidden;
+    .icon.icon-logo-portal {
+      background-image: url(%PUBLIC_URL%/logo192.png);
+      height: 36px;
+      width: 36px;
+    }
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+      @media (min-width: 1920px) {
+        max-width: 1858px;
+      }
     }
   </style>
 </head>
@@ -83,8 +85,109 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <!-- to test locally dinamic header insert the same height of headernode into padding-top -->
-  <div style="padding-top:50px;" id="1302766139">
-    <div class="js-navbar-menu wrapper-header fakeHeader"> </div>
+  <div class="header">
+    <div class="js-navbar-menu wrapper-header" id="1302766139" style="padding-top: 50px;">
+      <div class="wrapper-sticky-fixed navbar-light">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container">
+            <div class="header-menu-left-head js-header-left-dnone">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="icon icon-hamburger-menu"></i>
+              </button>
+              <a class="navbar-brand" href="%PUBLIC_URL%">
+                <i class="icon icon-logo-portal"></i>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div tabindex="0" class="js-bg-opacity-menu bg-opacity-menu d-sm-none d-md-none d-lg-block"></div>
+      <div class="header-menu-left js-menu-left-dtm menu-left-close">
+        <div class="navbar-collapse" id="navbar">
+          <div class="wrapper-menu">
+            <div class="js-header-container box-personal-program-bonus user-not-logged">
+              <p class="js-slogan logged-user-slogan d-none h3" data-slogan="Ciao {{NAME}}!"></p>
+              <p class="not-logged-user-slogan h3">Benvenuto!</p>
+              <div id="account"></div>
+              <ul class="wrapper-btn-navbar">
+              </ul>
+              <button type="button" class="collapsed close-menu-button js-btn-close-menu" data-toggle="collapse"
+                data-target="#navbar" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="icon icon-close-white"></i>
+              </button>
+            </div>
+            <nav class="navbar navbar-expand-lg rounded px-3 position-relative">
+              <a class="navbar-brand" href="%PUBLIC_URL%">
+                <i class="icon icon-logo-portal"></i>
+              </a>
+              <div class="nav nav-tabs tabbable-overflow" id="nav-tab" role="tablist">
+                <div class="bg-tab-left d-none"></div>
+                <div class="bg-tab-right d-none"></div>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="fade dropdown-menu megamenu js-megamenu active" id="dropdown1" role="tabpanel"
+                aria-labelledby="dropdown1-tab">
+                <div class="wrapper-item-mobile">
+                </div>
+              </div>
+              <div class="fade dropdown-menu megamenu js-megamenu" id="dropdown2" role="tabpanel"
+                aria-labelledby="dropdown2-tab">
+                <div class="wrapper-item-mobile">
+                </div>
+              </div>
+              <div class="fade dropdown-menu megamenu js-megamenu" id="dropdown3" role="tabpanel"
+                aria-labelledby="dropdown3-tab">
+                <div class="wrapper-item-mobile">
+                </div>
+              </div>
+              <div class="fade dropdown-menu megamenu js-megamenu" id="dropdown4" role="tabpanel"
+                aria-labelledby="dropdown4-tab">
+                <div class="wrapper-item-mobile">
+                </div>
+              </div>
+            </div>
+            <div class="wrapper-footer-mobile">
+              <div class="menu-footer-mobile">
+                <div class="row align-items-center contact-menu-footer-mobile">
+                  <div class="col-12">
+                    <p class="title-contact">Contattaci</p>
+                  </div>
+                  <div class="col-3">
+                    <a href="tel:800999445">
+                      <div class="circle-contact-icon">
+                        <i class="icon icon-contacts-call"></i>
+                      </div>
+                      <p class="text-white text-10">Telefono</p>
+                    </a>
+                  </div>
+                  <div class="col-3">
+                    <a href="javascript:vivochaEngageChat();">
+                      <div class="circle-contact-icon">
+                        <i class="icon icon-contacts-chat"></i>
+                      </div>
+                      <p class="text-white text-10">Chat</p>
+                    </a>
+                  </div>
+                  <div class="col-3">
+                    <a href="mailto:info.cbr.maranata@gmail.com">
+                      <div class="circle-contact-icon">
+                        <i class="icon icon-contacts-mail"></i>
+                      </div>
+                      <p class="text-white text-10">Mail</p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="close-menu-button js-btn-close-menu btn-only-desktop">
+          <i class="icon icon-close-sm"></i>
+        </button>
+      </div>
+    </div>
   </div>
   <!-- Use this element to simulate non fixed alerts. -->
   <div class="wrapper-alert-bread"></div>
@@ -109,7 +212,6 @@
       <div class="fr-col-12">
         <div class="text-component-container bg-white">
           <h1 class="h3 title">
-            Seo Text example
           </h1>
           <div class="container-description text-14 richtext-container">
           </div>

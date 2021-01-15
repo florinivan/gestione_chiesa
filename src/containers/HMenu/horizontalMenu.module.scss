@@ -60,25 +60,21 @@
     }
   }
 
-  @media (min-width: $zero) {
-    width: calc(100% - 53px);
-  }
-
   @media (min-width: $desktopLarge) {
-    width: 93%;
+    width: 100%;
     margin-bottom: 24px;
   }
   @media (min-width: $desktopXlarge) {
-    width: 93.6%;
+    width: 100%;
   }
   @media (min-width: $desktopXXlarge) {
-    width: 94%;
+    width: 100%;
   }
   @media (min-width: $desktopXXXlarge) {
-    width: 94.6%;
+    width: 100%;
   }
   @media (min-width: $desktopXXXXlarge) {
-    width: 95.6%;
+    width: 100%;
   }
 }
 

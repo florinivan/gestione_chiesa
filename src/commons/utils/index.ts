@@ -1,6 +1,17 @@
 import { Constructor } from 'commons/types';
 import config from 'shared/configuration';
 
+/**
+ * params
+ * date [JS Date()]
+ * day_in_week [int] 1 (Mon) - 7 (Sun)
+ */
+export function nextWeekdayDate(date: Date, day_in_week: number) {
+  const ret = new Date(date || new Date());
+  ret.setDate(ret.getDate() + ((day_in_week - 1 - ret.getDay() + 7) % 7) + 1);
+  return ret;
+}
+
 export const truncateWord = (word: string, truncateLength: number, ending = '...') =>
   word.length > truncateLength ? word.substring(0, truncateLength - ending.length) + ending : word;
 

@@ -1,0 +1,71 @@
+@import "shared/styles/base/_breakpoint.scss";
+
+.containerHotbet {
+  padding-right: 0px;
+  // padding-left: 16px;
+  @media (min-width: $desktopLarge) {
+    padding-right: 0px;
+    padding-left: 8px;
+  }
+  div[class*="pdElement"] {
+    padding-top: 8px;
+    @media (min-width: $desktopLarge) {
+      padding-top: 16px;
+    }
+  }
+  div[class*="hotBetCard"] {
+    div[class="multiple"] div[class*="selectionButton_btn"] {
+      min-width: 100%;
+    }
+  }
+}
+
+.paddingColumnSport {
+  padding: 0px;
+  .topWinnerWidget {
+    padding: 12px 0px;
+    @media (min-width: $desktopLarge) {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+}
+
+.paddingTabTop {
+  padding: 0px;
+  @media (min-width: $desktopLarge) {
+    padding-right: 0px;
+    padding-left: 8px;
+  }
+}
+
+.sportRow {
+  display: flex;
+}
+
+.competitionMenuColumn {
+  display: none;
+  width: 204px;
+  flex-shrink: 0;
+
+  @media (min-width: $desktopLarge) {
+    display: block;
+  }
+  @media (min-width: $desktopXXXlarge) {
+    width: 243px;
+  }
+  @media (min-width: $desktopXXXXlarge) {
+    width: 296px;
+  }
+}
+
+.sportBodyColumn {
+  flex-grow: 1;
+  overflow: hidden;
+  @media (min-width: $desktopLarge) {
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 0px;
+    overflow-y: visible;
+  }
+}

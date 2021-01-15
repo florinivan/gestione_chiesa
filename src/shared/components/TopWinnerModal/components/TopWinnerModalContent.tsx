@@ -1,19 +1,18 @@
 import React from 'react';
-import { useIntl } from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 
-import { TopWinner } from 'commons/models/TopWinner';
-import { Text } from 'shared/atomic-ui/Text/Text';
+import { DataPresentChurch } from 'commons/models/PresentMember';
 import { TopWinnerModalContentRow } from 'shared/components/TopWinnerModal/components/TopWinnerModalContentRow';
 import classNames from 'classnames';
 
 import styles from 'shared/components/TopWinnerModal/components/topWinnerModalContent.module.scss';
+import { NewIcon } from 'shared/atomic-ui/Icon/Icon';
 
 interface TopWinnerModalContentProps {
-  topWinner: TopWinner;
+  datePresent: DataPresentChurch;
 }
 
-export const TopWinnerModalContent: React.FC<TopWinnerModalContentProps> = ({ topWinner }) => {
-  const intl = useIntl();
+export const TopWinnerModalContent: React.FC<TopWinnerModalContentProps> = ({ datePresent }) => {
   const classesMarketTitle = classNames(styles.contentTitle, styles.marketTitle);
   const classesQuote = classNames(styles.contentTitle, styles.quote);
   const eventTitle = classNames(styles.contentTitle, styles.event);
@@ -22,31 +21,20 @@ export const TopWinnerModalContent: React.FC<TopWinnerModalContentProps> = ({ to
     <div className={styles.container}>
       <div className={styles.modalContentTitle}>
         <div className={eventTitle}>
-          <Text as="p" color="text-white" size="text-12" bold>
-            {intl.formatMessage({
-              id: 'fr.shared.components.TopWinnerModal.TopwinnerModalContent.event'
-            })}
-          </Text>
+          <FormattedMessage id="fr.containers.table.name" />
         </div>
         <div className={styles.containerHalfTitle}>
           <div className={classesMarketTitle}>
-            <Text as="p" color="text-white" size="text-12" bold>
-              {intl.formatMessage({
-                id: 'fr.shared.components.TopWinnerModal.TopwinnerModalContent.market'
-              })}
-            </Text>
+            <FormattedMessage id="fr.containers.table.number_childrens_14" />
+            <NewIcon color="black" size="icon-size-20" name={'Arrow-Down'} />
           </div>
           <div className={classesQuote}>
-            <Text as="p" color="text-white" size="text-12" bold>
-              {intl.formatMessage({
-                id: 'fr.component.BetsTable.quote'
-              })}
-            </Text>
+            <FormattedMessage id="fr.containers.table.phone" />
           </div>
         </div>
       </div>
       <>
-        <TopWinnerModalContentRow topWinnerBettingList={topWinner.bettingList} />
+        <TopWinnerModalContentRow datePresent={datePresent.presents} />
       </>
     </div>
   );

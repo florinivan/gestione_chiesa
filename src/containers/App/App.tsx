@@ -5,7 +5,6 @@ import { useHistory } from 'react-router';
 import { AppWrapper } from 'containers/App/components/AppWrapper';
 import { getMessages } from 'shared/dictionary';
 import { browserInfoService } from 'services/BrowserInfoService/BrowserInfoService';
-import { widgetsConfigService } from 'services/WidgetsConfigService';
 import Config from 'shared/configuration';
 import { utagView } from 'shared/utils/utag';
 
@@ -22,8 +21,7 @@ const App: React.FC<{}> = function App() {
   React.useEffect(() => {
     const subscriptions = [
       browserInfoService.subscribeToWindowScrollChanges(),
-      browserInfoService.subscribeToRootBettingOffsetTopChanges(),
-      widgetsConfigService.fetchAll().subscribe()
+      browserInfoService.subscribeToRootBettingOffsetTopChanges()
     ];
     return () => {
       subscriptions.forEach((subscription) => subscription.unsubscribe());

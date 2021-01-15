@@ -6,11 +6,13 @@
       "REACT_APP_LANG_FR": "it-IT",
       "comment:0": "======Comment:Browser router paths======",
       "REACT_APP_BROWSER_ROUTER_PREFIX": "/maranata",
-      "REACT_APP_SHOWCASE_HMENU": "menu/:item"
+      "REACT_APP_SHOWCASE_HMENU": "menu/:item",
+      "REACT_APP_SHOWCASE_HMENU_PRESENTS": "menu/presenta",
+      "REACT_APP_API_BASE": "http://localhost:3001/maranata"
     },
     "dev": {
       "REACT_APP_BROWSER_ROUTER_BASE": "/",
-      "REACT_APP_CMS_ENDPOINT_BASE": "",
+      "REACT_APP_CMS_ENDPOINT_BASE": "http://localhost:3000",
       "REACT_APP_ENDPOINT": "",
       "REACT_APP_PRIVATE_AREA_BASE": ""
     },

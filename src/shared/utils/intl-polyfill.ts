@@ -94,6 +94,7 @@ function polyfillIntlDateTimeFormatIfNecessary(
     .then(() => {
       // @see https://formatjs.io/docs/polyfills/intl-datetimeformat/#default-timezone
       if ('__setDefaultTimeZone' in Intl.DateTimeFormat) {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         (Intl.DateTimeFormat as any).__setDefaultTimeZone(originalTimeZone || 'Europe/Rome');
       }
 
@@ -158,7 +159,7 @@ export function polyfillIntlIfNecessary(locales: ReadonlyArray<string>): Promise
   // @see https://www.loc.gov/standards/iso639-2/php/code_list.php
   const localesConvertedToISO6391Format = locales
     .filter(Boolean)
-    .map(r => r.replace(/[_-]\w+$/gi, ''));
+    .map((r) => r.replace(/[_-]\w+$/gi, ''));
 
   const intlPolyfillChecks = Promise.all([
     polyfillGetCanonicalLocalesIfNecessary(),
@@ -168,7 +169,7 @@ export function polyfillIntlIfNecessary(locales: ReadonlyArray<string>): Promise
   ]);
 
   intlPolyfillChecks.then(
-    outcome => {
+    (outcome) => {
       Logger.info('intl', 'polyfill', { outcome, localesConvertedToISO6391Format, locales });
     },
     (reason: unknown) => Logger.error('intlPolyfillChecks', 'error', reason)

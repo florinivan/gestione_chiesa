@@ -1,0 +1,284 @@
+@font-face {
+    font-family: "fr-icons";
+    src: url("./fr-icons.eot?5175b80fb7da15bd226350b32b9b8dfa?#iefix") format("embedded-opentype"),
+url("./fr-icons.woff2?5175b80fb7da15bd226350b32b9b8dfa") format("woff2"),
+url("./fr-icons.woff?5175b80fb7da15bd226350b32b9b8dfa") format("woff"),
+url("./fr-icons.ttf?5175b80fb7da15bd226350b32b9b8dfa") format("truetype"),
+url("./fr-icons.svg?5175b80fb7da15bd226350b32b9b8dfa#fr-icons") format("svg");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: fr-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Ancora:before {
+    content: "\f101";
+}
+.icon-Arrow-Back:before {
+    content: "\f102";
+}
+.icon-Arrow-Double:before {
+    content: "\f103";
+}
+.icon-Arrow-Down:before {
+    content: "\f104";
+}
+.icon-Arrow-Forward:before {
+    content: "\f105";
+}
+.icon-Arrow-Up:before {
+    content: "\f106";
+}
+.icon-Bar-Code:before {
+    content: "\f107";
+}
+.icon-Basket:before {
+    content: "\f108";
+}
+.icon-Bathlon:before {
+    content: "\f109";
+}
+.icon-Calcio-a-5:before {
+    content: "\f10a";
+}
+.icon-Calcio:before {
+    content: "\f10b";
+}
+.icon-Calendar:before {
+    content: "\f10c";
+}
+.icon-Cartella:before {
+    content: "\f10d";
+}
+.icon-Check-box-Selected:before {
+    content: "\f10e";
+}
+.icon-Check-box-Unselected:before {
+    content: "\f10f";
+}
+.icon-Chips:before {
+    content: "\f110";
+}
+.icon-Ciclismo:before {
+    content: "\f111";
+}
+.icon-Close:before {
+    content: "\f112";
+}
+.icon-Come-salire:before {
+    content: "\f113";
+}
+.icon-Cricket:before {
+    content: "\f114";
+}
+.icon-Cup:before {
+    content: "\f115";
+}
+.icon-Delete:before {
+    content: "\f116";
+}
+.icon-Details:before {
+    content: "\f117";
+}
+.icon-Esports:before {
+    content: "\f118";
+}
+.icon-FAQ:before {
+    content: "\f119";
+}
+.icon-Facebook:before {
+    content: "\f11a";
+}
+.icon-Feedback:before {
+    content: "\f11b";
+}
+.icon-Filter:before {
+    content: "\f11c";
+}
+.icon-Football-americano:before {
+    content: "\f11d";
+}
+.icon-Group:before {
+    content: "\f11e";
+}
+.icon-Hokey:before {
+    content: "\f11f";
+}
+.icon-Info:before {
+    content: "\f120";
+}
+.icon-Live:before {
+    content: "\f121";
+}
+.icon-Messenger:before {
+    content: "\f122";
+}
+.icon-No-Results:before {
+    content: "\f123";
+}
+.icon-Occhio-Open:before {
+    content: "\f124";
+}
+.icon-Odd-Change-Arrow-Down:before {
+    content: "\f125";
+}
+.icon-Odd-Change-Arrow-Up:before {
+    content: "\f126";
+}
+.icon-Olimpiadi:before {
+    content: "\f127";
+}
+.icon-On-demand:before {
+    content: "\f128";
+}
+.icon-Online:before {
+    content: "\f129";
+}
+.icon-Open:before {
+    content: "\f12a";
+}
+.icon-Order-by-AZ:before {
+    content: "\f12b";
+}
+.icon-Order-by-time:before {
+    content: "\f12c";
+}
+.icon-Pallamano:before {
+    content: "\f12d";
+}
+.icon-Pallanuto:before {
+    content: "\f12e";
+}
+.icon-Pesapallo:before {
+    content: "\f12f";
+}
+.icon-Preferiti-Selected:before {
+    content: "\f130";
+}
+.icon-Preferiti-Unselected:before {
+    content: "\f131";
+}
+.icon-Prematch:before {
+    content: "\f132";
+}
+.icon-Print:before {
+    content: "\f133";
+}
+.icon-Pugilato:before {
+    content: "\f134";
+}
+.icon-Punta-alle-spalle:before {
+    content: "\f135";
+}
+.icon-Regolamenti:before {
+    content: "\f136";
+}
+.icon-Retail:before {
+    content: "\f137";
+}
+.icon-Rugby:before {
+    content: "\f138";
+}
+.icon-Salto-con-gli-sci:before {
+    content: "\f139";
+}
+.icon-Save:before {
+    content: "\f13a";
+}
+.icon-Sci-alpino:before {
+    content: "\f13b";
+}
+.icon-Score-Board:before {
+    content: "\f13c";
+}
+.icon-Search:before {
+    content: "\f13d";
+}
+.icon-Sgancia:before {
+    content: "\f13e";
+}
+.icon-Share:before {
+    content: "\f13f";
+}
+.icon-Single-player:before {
+    content: "\f140";
+}
+.icon-Snooker:before {
+    content: "\f141";
+}
+.icon-Sostenibilità:before {
+    content: "\f142";
+}
+.icon-Speciali-2:before {
+    content: "\f143";
+}
+.icon-Speciali:before {
+    content: "\f144";
+}
+.icon-Spettacolo:before {
+    content: "\f145";
+}
+.icon-Star-Selected:before {
+    content: "\f146";
+}
+.icon-Star-Unselected:before {
+    content: "\f147";
+}
+.icon-Statistics:before {
+    content: "\f148";
+}
+.icon-Streaming:before {
+    content: "\f149";
+}
+.icon-SuperStar:before {
+    content: "\f14a";
+}
+.icon-Table:before {
+    content: "\f14b";
+}
+.icon-Telegram:before {
+    content: "\f14c";
+}
+.icon-Tennis tavolo:before {
+    content: "\f14d";
+}
+.icon-Tennis:before {
+    content: "\f14e";
+}
+.icon-Ticket:before {
+    content: "\f14f";
+}
+.icon-Time:before {
+    content: "\f150";
+}
+.icon-Tipster:before {
+    content: "\f151";
+}
+.icon-Top:before {
+    content: "\f152";
+}
+.icon-Tutti-i-giochi:before {
+    content: "\f153";
+}
+.icon-Twitter:before {
+    content: "\f154";
+}
+.icon-Unsubscribe:before {
+    content: "\f155";
+}
+.icon-VIP:before {
+    content: "\f156";
+}
+.icon-Volley:before {
+    content: "\f157";
+}
+.icon-Whatsapp:before {
+    content: "\f158";
+}

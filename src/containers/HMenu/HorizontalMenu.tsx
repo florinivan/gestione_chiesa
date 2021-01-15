@@ -75,8 +75,6 @@ export function HorizontalMenu({ current, listmenu, getLinkTo, rightButton }: Ho
           );
         })}
       </HorizontalScroll>
-
-      <div className={`${styles.wrapperRightButton}`}>{rightButton}</div>
     </div>
   );
 }

@@ -59,22 +59,23 @@
   <script src="%PUBLIC_URL%/utag.sync.js"></script>
   <style>
     .navbar-brand .icon-logo-portal {
-      height: 32px;
-      width: 32px;
-      background-size: 32px 32px;
+      height: 36px;
+      width: 36px;
+      background-size: 36px 36px;
     }
 
     .icon.icon-logo-portal {
       background-image: url(%PUBLIC_URL%/logo192.png);
-      height: 36px;
-      width: 36px;
+      height: 40px;
+      width: 40px;
     }
 
     h1#header-text {
       position: relative;
       top: 0;
       text-align: center;
-      font-size: 3em;
+      font-size: 2.6em;
+      color: #0b7d3e;
     }
 
     .container,
@@ -209,7 +210,7 @@
   </script>
   <script type="text/javascript">
     (function (a, b, c, d) {
-      a = '//tags.tiqcdn.com/utag/sisal/main/qa/utag.js';
+      a = '%PUBLIC_URL%/utag.js';
       b = document; c = 'script'; d = b.createElement(c);
       d.src = a; d.type = 'text/java' + c; d.async = true;
       a = b.getElementsByTagName(c)[0]; a.parentNode.insertBefore(d, a);

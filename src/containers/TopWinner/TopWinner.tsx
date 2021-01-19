@@ -1,5 +1,7 @@
 import React, { ReactElement, useEffect, useState } from 'react';
 import { FormattedMessage } from 'react-intl';
+import { useCurrentBreakpointName } from 'react-socks';
+import lodash from 'lodash';
 
 import { Text } from 'shared/atomic-ui/Text/Text';
 import { TopWinnerItem } from 'containers/TopWinner/TopWinnerItem';
@@ -8,12 +10,11 @@ import { topWinnerService } from 'services/TopWinnerService';
 import { useBehaviorSubject } from 'shared/hooks/useBehaviorSubject';
 
 import { DataPresentChurch } from 'commons/models/PresentMember';
+import { ModalWithChildren } from 'shared/components/TopWinnerModal/ModalWithChildren';
+import { useTopWinnerController } from 'shared/components/TopWinnerModal/useTopWinnerController';
+import { FormPresents } from 'shared/components/TopWinnerModal/components/FormPresents';
 
 import styles from 'containers/TopWinner/topWinner.module.scss';
-import { TopWinnerModalInsert } from 'shared/components/TopWinnerModal/TopWinnerModalInsert';
-import { useCurrentBreakpointName } from 'react-socks';
-import lodash from 'lodash';
-import { useTopWinnerController } from 'shared/components/TopWinnerModal/useTopWinnerController';
 
 export const TopWinner = (): ReactElement => {
   const topWinners = useBehaviorSubject(topWinnerService.topWinners$);
@@ -24,9 +25,14 @@ export const TopWinner = (): ReactElement => {
   const breakpoint = useCurrentBreakpointName();
   const isDesktop = breakpoint.includes('desktop');
 
-  const { show, setShow } = useTopWinnerController(false);
+  const [show, setShow] = useState(false);
 
-  const handleShow = () => setShow(true);
+  const handleShow = () => {
+    setShow(true);
+  };
+  const handleClose = () => {
+    setShow(false);
+  };
 
   useEffect(() => {
     const subscription = topWinnerService.fetchPresentMember().subscribe();
@@ -37,10 +43,36 @@ export const TopWinner = (): ReactElement => {
 
   const getDatePresents = React.useMemo(() => {
     const grouped = lodash.groupBy(topWinners, 'data');
-    return Object.keys(grouped).map((key) => {
-      return new DataPresentChurch(parseInt(key), grouped[key]);
-    });
+    if (Object.keys(grouped).length > 0) {
+      return Object.keys(grouped).map((key) => {
+        return new DataPresentChurch(parseInt(key), grouped[key]);
+      });
+    }
   }, [topWinners]);
+
+  const {
+    validated,
+    handleSubmit,
+    nameSurname,
+    setNameSurname,
+    numberChildrens,
+    setNumberChildrens,
+    numberPhone,
+    setNumberPhone
+  } = useTopWinnerController(handleClose);
+
+  const children = (
+    <FormPresents
+      onEventHandler={handleSubmit}
+      validated={validated}
+      nameSurname={nameSurname}
+      setNameSurname={setNameSurname}
+      numberChildrens={numberChildrens}
+      setNumberChildrens={setNumberChildrens}
+      numberPhone={numberPhone}
+      setNumberPhone={setNumberPhone}
+    />
+  );
 
   return (
     <section>
@@ -84,7 +116,12 @@ export const TopWinner = (): ReactElement => {
             <TopWinnerItem key={index} ranking={tw.getdateDay()} presentChurch={tw} />
           ))}
       </div>
-      <TopWinnerModalInsert showModal={show} />
+      <ModalWithChildren
+        showModal={show}
+        handleClose={handleClose}
+        titleKey={'fr.containers.button.label.insert.present'}>
+        {children}
+      </ModalWithChildren>
     </section>
   );
 };

@@ -1,15 +1,14 @@
+//import moment from 'moment';
 import { useState } from 'react';
 
-export const useTopWinnerController = (showModal: boolean) => {
+export const useTopWinnerController = (handleClose: () => void) => {
   const [nameSurname, setNameSurname] = useState('');
   const [numberChildrens, setNumberChildrens] = useState(0);
   const [numberPhone, setNumberPhone] = useState('');
 
   const [validated, setValidated] = useState(false);
-
-  const [show, setShow] = useState(showModal);
-
-  const handleClose = () => setShow(false);
+  //const dateNow = Date.now();
+  //const dayName = moment(new Date(dateNow)).format('dddd DD MMM').toLocaleUpperCase();
 
   const handleSubmit = (event: any) => {
     const form = event.currentTarget;
@@ -19,13 +18,10 @@ export const useTopWinnerController = (showModal: boolean) => {
     }
 
     setValidated(true);
-    setShow(false);
+    handleClose();
   };
 
   return {
-    setShow,
-    show,
-    handleClose,
     validated,
     handleSubmit,
     nameSurname,

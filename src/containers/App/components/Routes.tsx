@@ -13,7 +13,7 @@ export const Routes: React.FC<{}> = React.memo(function Routes() {
       <Route path={Config.BROWSER_ROUTER_PATH_MENUBOOK}>
         <HMenu />
       </Route>
-      <Redirect to={Config.BROWSER_ROUTER_PATH_MAP.SHOWCASE_HOME} />
+      <Redirect to={Config.BROWSER_ROUTER_PATH_MAP.MENUBOOK_ITEM_PRESENT} />
     </Switch>
   );
 });

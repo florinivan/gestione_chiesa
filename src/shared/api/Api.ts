@@ -28,9 +28,9 @@ export class API {
     return (
       httpClient
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        .get<any>(`${Config.API_BASE}/presenza_chiesa`)
+        .get<PresentMemberRaw[]>(`${Config.API_BASE}/presenza_chiesa`)
         .pipe(
-          map(({ response }) => response.map((raw: PresentMemberRaw) => new PresentMember(raw)))
+          map(({ response }) => response?.map((raw: PresentMemberRaw) => new PresentMember(raw)))
         )
     );
   }
